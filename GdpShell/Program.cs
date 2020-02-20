@@ -12,6 +12,7 @@ namespace Gdp
             LocalGnssExecutor.Execute(args);
 
             Console.WriteLine("See you!");
+
         }
     }
 }
