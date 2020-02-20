@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>gdp</AssemblyName>
+    <RootNamespace>Gdp</RootNamespace>
+    <ServerGarbageCollection>false</ServerGarbageCollection> 
+    <ConcurrentGarbageCollection>true</ConcurrentGarbageCollection> 
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Gdp.Core\Gdp.Standard.csproj" />
+  </ItemGroup>
+
+</Project>
