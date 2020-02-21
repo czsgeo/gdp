@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "GdpShell": {
+      "commandName": "Project",
+      "commandLineArgs": "-C -InputPath ./Data/hers0010.18O ./Data/Sample/ -OutputDirectory ./Data/OneTable/"
+    }
+  }
+}
