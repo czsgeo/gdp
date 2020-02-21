@@ -422,7 +422,7 @@ namespace Gdp.Data.Rinex
         /// <summary>
         /// MW 周单位
         /// </summary>
-        public double MwCycle => MwValue * Math.Abs(FrequenceA.Value - FrequenceB.Value);
+        public double MwCycle => MwValue * Math.Abs(FrequenceA.Value - FrequenceB.Value) * 1E6 / GeoConst.LIGHT_SPEED;
         /// <summary>
         /// whether has gross error in range.
         /// </summary>

@@ -65,6 +65,10 @@ namespace Gdp
                 table.AddItem("Epoch", epoch.ReceiverTime);
                 foreach (var sat in epoch)
                 {
+                     if (sat.PhaseA == null || sat.PhaseB == null||sat.RangeA==null|| sat.RangeB == null )
+                    {
+                        continue;
+                    }
                     table.AddItem(sat.Prn + "_Mw", sat.MwCycle);
                     if (FileEphemerisService != null)
                     {
@@ -88,6 +92,10 @@ namespace Gdp
                 table.AddItem("Epoch", epoch.ReceiverTime);
                 foreach (var sat in epoch)
                 {
+                    if (sat.PhaseA == null || sat.PhaseB == null)
+                    {
+                        continue;
+                    }
                     table.AddItem(sat.Prn + "_Li", sat.GfValue);
                     if (FileEphemerisService != null)
                     {
@@ -117,6 +125,10 @@ namespace Gdp
                     if (epoch.Contains(prn))
                     {
                         var sat = epoch[prn];
+                        if (sat.RangeA == null || sat.RangeB == null)
+                        {
+                            continue;
+                        }
                         var isError = sat.IsRangeGrossError(k1, k2);
                         if (isError)
                         {
@@ -148,7 +160,15 @@ namespace Gdp
                 {
                     if (epoch.Contains(prn))
                     {
+                        if (prn.SatelliteType == SatelliteType.C)
+                        { 
+                        }
                         var sat = epoch[prn];
+                        if (sat.PhaseA == null || sat.PhaseB == null || sat.RangeA == null || sat.RangeB == null)
+                        {
+                            lastVal = 0;
+                            continue;
+                        }
                         var MwValue = sat.MwCycle;
                         if (lastVal == 0)
                         {
@@ -193,7 +213,11 @@ namespace Gdp
                     if (epoch.Contains(prn))
                     {
                         var sat = epoch[prn];
-
+                        if (sat.PhaseA == null || sat.PhaseB == null)
+                        {
+                            lastVal = 0;
+                            continue;
+                        }
                         if (lastVal == 0)
                         {
                             lastVal = sat.GfValue;
