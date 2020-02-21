@@ -55,6 +55,7 @@ namespace Gdp
             SiteNameLength = new EnableInteger(8);
             IsUpperFileName = true;
             IsUpperSiteName = true;
+            this.OutputDirectory = Setting.TempDirectory;
 
         }
 

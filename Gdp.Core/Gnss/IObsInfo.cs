@@ -127,7 +127,7 @@ namespace Gdp
         /// <summary>
         /// 最后一次观测时间。默认时间为1天。
         /// </summary>
-        public Time EndTime { get { if (endTime < StartTime) endTime = StartTime + TimeSpan.FromDays(0.9999999999); return endTime; } set { endTime = value; } }
+        public Time EndTime { get { if ( endTime == null || endTime < StartTime) endTime = StartTime + TimeSpan.FromDays(0.9999999999); return endTime; } set { endTime = value; } }
         /// <summary>
         /// 结束时间是否可以探知？
         /// </summary>

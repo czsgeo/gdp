@@ -120,12 +120,10 @@ namespace Gdp
                         result[FrequenceType.E] = new List<int>() { 6 };
                         break;
                     case SatelliteType.C: //215786
-                        result[FrequenceType.A] = new List<int>() { 2 };
-                        result[FrequenceType.B] = new List<int>() { 1 };
-                        result[FrequenceType.C] = new List<int>() { 5 };//
-                        result[FrequenceType.D] = new List<int>() { 7 };
-                        result[FrequenceType.E] = new List<int>() { 8 };
-                        result[FrequenceType.F] = new List<int>() { 6 };
+                        result[FrequenceType.A] = new List<int>() { 2 , 1};
+                      //  result[FrequenceType.B] = new List<int>() { 1 };
+                        result[FrequenceType.C] = new List<int>() { 7 };//
+                        result[FrequenceType.D] = new List<int>() { 6 }; 
                         break;
                     case SatelliteType.J:
                         result[FrequenceType.A] = new List<int>() { 1 };
@@ -204,12 +202,9 @@ namespace Gdp
                 case GnssType.BeiDou: //215786
                     switch (freqType)
                     {
-                        case FrequenceType.A: return Frequence.CompassB1_2;
-                        case FrequenceType.B: return Frequence.CompassB1;
-                        case FrequenceType.C: return Frequence.CompassB2a;
-                        case FrequenceType.D: return Frequence.CompassB2b;
-                        case FrequenceType.E: return Frequence.CompassB2ab;
-                        case FrequenceType.F: return Frequence.CompassB3;
+                        case FrequenceType.A: return Frequence.CompassB1;
+                        case FrequenceType.B: return Frequence.CompassB2;
+                        case FrequenceType.C: return Frequence.CompassB3; 
                         default:
                             return null;
                             //   throw new ArgumentException("BeiDou 有三个频率。分别以编号1、2、3表示。");

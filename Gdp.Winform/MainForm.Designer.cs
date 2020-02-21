@@ -41,6 +41,7 @@
             this.button_extractSiteInfo = new System.Windows.Forms.Button();
             this.button_tableView = new System.Windows.Forms.Button();
             this.button_openLog = new System.Windows.Forms.Button();
+            this.button_testobs = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button_convert
@@ -158,7 +159,7 @@
             // 
             this.button_extractSiteInfo.BackColor = System.Drawing.Color.SkyBlue;
             this.button_extractSiteInfo.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_extractSiteInfo.Location = new System.Drawing.Point(129, 205);
+            this.button_extractSiteInfo.Location = new System.Drawing.Point(72, 198);
             this.button_extractSiteInfo.Name = "button_extractSiteInfo";
             this.button_extractSiteInfo.Size = new System.Drawing.Size(116, 82);
             this.button_extractSiteInfo.TabIndex = 4;
@@ -170,7 +171,7 @@
             // 
             this.button_tableView.BackColor = System.Drawing.Color.SkyBlue;
             this.button_tableView.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_tableView.Location = new System.Drawing.Point(263, 205);
+            this.button_tableView.Location = new System.Drawing.Point(206, 198);
             this.button_tableView.Name = "button_tableView";
             this.button_tableView.Size = new System.Drawing.Size(116, 82);
             this.button_tableView.TabIndex = 5;
@@ -182,13 +183,25 @@
             // 
             this.button_openLog.BackColor = System.Drawing.Color.SkyBlue;
             this.button_openLog.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_openLog.Location = new System.Drawing.Point(396, 205);
+            this.button_openLog.Location = new System.Drawing.Point(339, 198);
             this.button_openLog.Name = "button_openLog";
             this.button_openLog.Size = new System.Drawing.Size(116, 82);
             this.button_openLog.TabIndex = 6;
             this.button_openLog.Text = "Open Log";
             this.button_openLog.UseVisualStyleBackColor = false;
             this.button_openLog.Click += new System.EventHandler(this.button_openLog_Click);
+            // 
+            // button_testobs
+            // 
+            this.button_testobs.BackColor = System.Drawing.Color.SkyBlue;
+            this.button_testobs.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_testobs.Location = new System.Drawing.Point(469, 198);
+            this.button_testobs.Name = "button_testobs";
+            this.button_testobs.Size = new System.Drawing.Size(116, 82);
+            this.button_testobs.TabIndex = 6;
+            this.button_testobs.Text = "Parse Obs Test";
+            this.button_testobs.UseVisualStyleBackColor = false;
+            this.button_testobs.Click += new System.EventHandler(this.button_testobs_Click);
             // 
             // MainForm
             // 
@@ -201,6 +214,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.linkLabel_163mail);
             this.Controls.Add(this.linkLabel_gnsserSite);
+            this.Controls.Add(this.button_testobs);
             this.Controls.Add(this.button_openLog);
             this.Controls.Add(this.button_tableView);
             this.Controls.Add(this.button_extractSiteInfo);
@@ -232,5 +246,6 @@
         private System.Windows.Forms.Button button_extractSiteInfo;
         private System.Windows.Forms.Button button_tableView;
         private System.Windows.Forms.Button button_openLog;
+        private System.Windows.Forms.Button button_testobs;
     }
 }

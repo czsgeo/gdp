@@ -464,13 +464,9 @@ namespace Gdp
       //  static public Frequence CompassE1 { get { return new Frequence("E1", 1589.74); } }
 
         /// <summary>
-        /// 2, Compass B1
+        /// 1、2, Compass B1
         /// </summary>
-        static public Frequence CompassB1_2 { get { return new Frequence("B1_2", 1561.098); } }
-        /// <summary>
-        ///1,  BDS3 -1
-        /// </summary>
-        static public Frequence CompassB1 { get { return new Frequence("B1", 1575.42); } }
+        static public Frequence CompassB1 { get { return new Frequence("B1", 1561.098); } } 
         /// <summary>
         /// 5, Compass B2
         /// </summary>
@@ -478,7 +474,7 @@ namespace Gdp
         /// <summary>
         /// 7, Compass B2
         /// </summary>
-        static public Frequence CompassB2b { get { return new Frequence("B2b", 1207.140); } }
+        static public Frequence CompassB2 { get { return new Frequence("B2", 1207.140); } }
         /// <summary>
         /// 8
         /// </summary>
@@ -501,4 +497,5 @@ namespace Gdp
 
         #endregion
     }
+
 }

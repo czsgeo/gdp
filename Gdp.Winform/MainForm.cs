@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.Windows.Forms.DataVisualization.Charting;
+using Gdp.Data.Rinex;
 
 namespace Gdp.Winform
 {
@@ -81,6 +82,29 @@ namespace Gdp.Winform
         private void button_openLog_Click(object sender, EventArgs e)
         {
             Utils.FileUtil.OpenFile("./sys.log");
+        }
+
+        private void button_testobs_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Rinex Text|*.rnx;*.??o|All|*.*"; ;
+            openFileDialog.Multiselect = true;
+
+            if (openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                string[] files = openFileDialog.FileNames;
+                foreach (var filePath in files)
+                {
+                    var opt = new ObsFileConvertOption();
+                    opt.IsEnableRinexVertion = true;
+                    opt.Version = 3.02;
+                    ObsFileFormater ObsFileFormater = new ObsFileFormater(opt, filePath); 
+                    ObsFileFormater.Init();
+                    ObsFileFormater.Run();
+                }
+                Utils.FormUtil.ShowOkMessageBox("执行完毕！");
+            }
+
         }
     }
 }

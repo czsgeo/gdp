@@ -348,7 +348,10 @@ namespace Gdp.Data.Rinex
                     {
                         if (Current == null) continue;
 
-                        endTime = this.Current.RawTime;
+                        if (this.Current.RawTime != null && this.Current.RawTime != default(Time))
+                        {
+                            endTime = this.Current.RawTime;
+                        }
                     }
                     this._header.EndTime = endTime;
                     log.Debug(_header.FileName + " 结束时间设置为 " + endTime);
