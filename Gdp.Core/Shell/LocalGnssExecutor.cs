@@ -76,36 +76,16 @@ namespace Gdp
                         Select(args);
                         break;
                     case ProcessType.C:
-                        var param = ConvertToOneTableParam.ParseArgs(args);
-                        var outDir = param.OutputDirectory;
-                        foreach (var inputPath in param.InputPath)
-                        {
-                            if (FileUtil.IsDirectory(inputPath))
-                            {
-                                if (!Directory.Exists(inputPath)) continue;
-
-                                var list = new List<string>();
-                                var files = Directory.GetFiles(inputPath, "*.rnx|*.RNX|*.??o|*.??O");
-                                var subDir = PathUtil.GetSubDirectory(inputPath);
-                                var dir = Path.Combine(outDir, subDir);
-                                FileUtil.CheckOrCreateDirectory(dir);
-                                foreach (var file in files)
-                                {
-                                    ConvertToOneTable(dir, file);
-                                }
-                            }
-                            else
-                            {
-                                ConvertToOneTable(outDir, inputPath);
-                            }
-                        }
+                       
+                        ConvertToOneTable(args);
+                        break;
+                    case ProcessType.E:
+                        ExtractSiteInfo(args);
                         break;
                     default:
                         log.Warn(cmdParam.SolveType + "Not implemented " );
                         break;
-                }
-                               
-
+                } 
 
                 ShowInfo("Done！");
                 var timeSpan = DateTime.Now - startTime;
@@ -118,6 +98,67 @@ namespace Gdp
 
             //暂停屏幕
             //    System.Console.ReadLine();
+        }
+
+        private static void ExtractSiteInfo(string[] args)
+        {
+            var param = SiteInfoExtractorParam.ParseArgs(args);
+            var outDir = param.OutputDirectory;
+            List<string> inputPathes = new List<string>();
+            foreach (var inputPath in param.InputPath)
+            {
+                if (FileUtil.IsDirectory(inputPath))
+                {
+                    if (!Directory.Exists(inputPath)) continue;
+
+                    var list = new List<string>();
+                    var files = Directory.GetFiles(inputPath, "*.rnx|*.RNX|*.??o|*.??O");
+                    var subDir = PathUtil.GetSubDirectory(inputPath);
+                    var dir = Path.Combine(outDir, subDir);
+                    FileUtil.CheckOrCreateDirectory(dir);
+
+                    inputPathes.AddRange(files);
+                }
+                else
+                {
+                    inputPathes.Add(inputPath);
+                }
+            }
+
+            SiteInfoExtractor extractor = new SiteInfoExtractor()
+            {
+                OutputDirectory = param.OutputDirectory
+            };
+            extractor.Run(inputPathes.ToArray());
+        }
+
+        private static void ConvertToOneTable(string[] args)
+        {
+            ConvertToOneTableParam param;
+            string outDir;
+            param = ConvertToOneTableParam.ParseArgs(args);
+            outDir = param.OutputDirectory;
+            foreach (var inputPath in param.InputPath)
+            {
+                if (FileUtil.IsDirectory(inputPath))
+                {
+                    if (!Directory.Exists(inputPath)) continue;
+
+                    var list = new List<string>();
+                    var files = Directory.GetFiles(inputPath, "*.rnx|*.RNX|*.??o|*.??O");
+                    var subDir = PathUtil.GetSubDirectory(inputPath);
+                    var dir = Path.Combine(outDir, subDir);
+                    FileUtil.CheckOrCreateDirectory(dir);
+                    foreach (var file in files)
+                    {
+                        ConvertToOneTable(dir, file);
+                    }
+                }
+                else
+                {
+                    ConvertToOneTable(outDir, inputPath);
+                }
+            }
         }
 
         private static void ConvertToOneTable(string outDir, string inputPath)

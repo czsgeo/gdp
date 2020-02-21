@@ -1,8 +1,16 @@
 ﻿Welcome to use GDP(GNSS Data Prepressor) Version 1.0
 
-the following shows the shell 命令规则。
+
+GDP is distributed under the GNU LGP License (http://www.gnu.org/licenses/lgpl.html).
 
 
+
+The following shows the shell command rules. Command parameters are case insensitive in GDP, while whether the path is case sensitive depends on the operating system. For example Windows systems are  case insensitive, while most Linux  systems are case sensitive. 
+
+usage:  Gdp   [options]
+Gdp <module name> [<module-options>] 
+
+ 
 1.Common arguments:
 
 This should be in the start of the command line.
@@ -13,14 +21,15 @@ This should be in the start of the command line.
 -F #Format
 
 -S #Select 
--V #View
+-C #convert to one table text file
+-E # extract site into 
 
 1.1 B:Build Urls
 
 Build Urls by indicated condition.
 
 
-Params：
+Params:
 -B #Process marker 
 -OutputPath MyUrls.txt 
 -StartTime 2020 1 1 
@@ -32,27 +41,31 @@ Params：
 -UrlModels {UrlDirectory}/{Week}/{SourceName}{Week}{DayOfWeek}.{ProductType}.Z
 
 For example:
+
 -T B -OutputPath MyUrls.txt -StartTime 2020 1 1 -EndTime 2020 1 5 -ProductType Sp3 -Source igs -IntervalSecond 86400 -UrlDirectories ftp://igs.ensg.eu/pub/igs/products -UrlModels {UrlDirectory}/{Week}/{SourceName}{Week}{DayOfWeek}.{ProductType}.Z
+
 
 1.2 D:Download
 
 Download urls in text line file from ftp server or web sites.
 
 
-Params：
+Params:
 -D  #Process marker   
 -DownloadDirectory ./Download 
 -UrlTextPath BuildUrl.txt
 -IsOverWrite False
 For example:
+
 -D -DownloadDirectory ./Download -UrlTextPath MyUrls.txt -IsOverWrite False
+
 
 1.3 F:Convert/Format
 
 Convert or format observation files that new files will be built. 
 
 
-Params：
+Params:
 -F  #Process marker   
 -InputPath ./Data/hers0010.18O ./Data/Sample/
 -OutputDirectory ./Data/Formated/
@@ -64,7 +77,9 @@ Params：
 
 
 For example: 
+
 -F -InputPath ./Data/hers0010.18O -OutputDirectory ./Data/Formated/ -OutVersion 3.02 -Interval 30 -SatelliteType G R C E -StartTime 2018 1 1 0 0 0 -EndTime 2018 1 1 12 0 0
+
 
 
 1.4 S: Select
@@ -72,7 +87,7 @@ For example:
 Select observation files to indicated directory, and do not change data content.
 
 
-Params：
+Params:
 -S   #Processing maker  
 -InputPath ./Data/hers0010.18O ./Data/Sample/
 -OutputDirectory ./Data/Selected/
@@ -88,20 +103,39 @@ Params：
 
 
 For example: 
--S -InputPath ./Data/hers0010.18O ./Data/Sample/ -OutputDirectory ./Data/Selected/ -IncludeSiteNames hers hert -ExcludeSiteNames algo -SatelliteType G R C E -StartTime 2018 1 1 0 0 0 -EndTime 2018 1 1 12 0 0 -ObsCodes L1C L2W -MinFileSizeMB 1.2 -MinEpochCount 1000 -MinFrequencyCount 2 ,
+
+-S -InputPath ./Data/hers0010.18O ./Data/Sample/ -OutputDirectory ./Data/Selected/ -IncludeSiteNames hers hert -ExcludeSiteNames algo -SatelliteType G R C E -StartTime 2018 1 1 0 0 0 -EndTime 2018 1 1 12 0 0 -ObsCodes L1C L2W -MinFileSizeMB 1.2 -MinEpochCount 1000 -MinFrequencyCount 2
 
 
-
-1.5 C: convert to one table
+1.5 C: Convert to one table
 
 Convert observation files to one table text file. 
 
-Params：
+
+
+Params:
 
 -C   #Processing maker  
 -InputPath ./Data/hers0010.18O ./Data/Sample/
 -OutputDirectory ./Data/OneTable/
 
 For example: 
+
 -C -InputPath ./Data/hers0010.18O ./Data/Sample/ -OutputDirectory ./Data/OneTable/
 
+
+1.6 E # extract site into
+
+Extract observation files info to one table text file. 
+
+
+
+Params:
+
+-E   #Processing maker  
+-InputPath ./Data/hers0010.18O ./Data/Sample/
+-OutputDirectory ./Data/OneTable/
+
+For example: 
+
+-E -InputPath ./Data/hers0010.18O ./Data/Sample/ -OutputDirectory ./Data/Temp/

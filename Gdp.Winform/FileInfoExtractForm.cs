@@ -24,7 +24,7 @@ namespace Gdp.Winform
         {
             InitializeComponent();
         }
-         
+
         bool IsCancel;
         DateTime startTime;
         public string OutputDirectory => this.directorySelectionControl1.Path;
@@ -40,10 +40,10 @@ namespace Gdp.Winform
 
         private void Button_cancel_Click(object sender, EventArgs e)
         {
-            IsCancel = true; 
+            IsCancel = true;
         }
-         
-          
+
+
 
         private void ShowInfo(string info)
         {
@@ -91,8 +91,8 @@ namespace Gdp.Winform
                 Process(subDir, inputPath);
             }
         }
-         
-         
+
+
         private void Process(string subDir, string inputPath)
         {
             try
@@ -123,16 +123,17 @@ namespace Gdp.Winform
                 table.AddItem("ReceiverNumber", siteInfo.ReceiverNumber);
                 table.AddItem("AntennaType", siteInfo.AntennaType);
                 table.AddItem("AntennaNumber", siteInfo.AntennaNumber);
-                  
+
 
                 this.Invoke(new Action(() =>
                 {
                     this.progressBar1.PerformStep();
                     this.progressBar1.Refresh();
                 }));
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
-                log.Error("转换出错：\t" + inputPath + "\t, "+ ex.Message );
+                log.Error("转换出错：\t" + inputPath + "\t, " + ex.Message);
             }
         }
 
@@ -158,7 +159,7 @@ namespace Gdp.Winform
                 int FileCount = this.fileOpenControl1.FileCount;
                 TableObjectViewForm form = new TableObjectViewForm(table);
                 form.Show();
-                ObjectTableWriter.Write(table,path); 
+                ObjectTableWriter.Write(table, path);
                 string info = "Completed, the total number is " + FileCount + ". The time consumption is " + m.ToString("0.000") + "m=" + seconds.ToString("0.00") + "s, with an average of " + (seconds / FileCount).ToString("0.000") + "s each file";
 
                 Utils.FormUtil.ShowOkAndOpenDirectory(path, info + ", open it?");
@@ -179,7 +180,8 @@ namespace Gdp.Winform
 
         private void ObsFileConvertForm_Load(object sender, EventArgs e)
         {
-            this.fileOpenControl1.FilePath = Setting.SampleOFile; 
+            this.fileOpenControl1.FilePath = Setting.SampleOFile;
         }
     }
+
 }

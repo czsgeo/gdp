@@ -145,6 +145,10 @@ namespace Gdp
         /// View One table
         /// </summary>
         C,
+        /// <summary>
+        /// Extract Site info
+        /// </summary>
+        E
     }
      
 }
