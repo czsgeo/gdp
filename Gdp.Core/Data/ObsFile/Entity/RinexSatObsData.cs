@@ -453,7 +453,10 @@ namespace Gdp.Data.Rinex
                 //EpochSatellite epochSat = EpochSat;
                 var f1 = FrequenceA.Value;
                 var f2 = FrequenceB.Value;
-                
+                if (this.RangeA == null || this.PhaseRangeA == 0 || this.RangeB == null || this.PhaseRangeB == 0)
+                {
+                    return Double.NaN;
+                }
                 double L1 = this.PhaseRangeA;
                 double L2 = this.PhaseRangeB;
                 //用原始的P1观测值
