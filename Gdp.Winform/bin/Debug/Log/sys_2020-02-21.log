@@ -1,0 +1,33 @@
+2020-02-21 19:32:05.310	Info	Obs File，载入了： Data\hers0010.18O	FileOpenControl
+2020-02-21 19:32:09.962	Info	Obs File，载入了： E:\[Work]\[思&写&投]\GDP\周跳绘图\CAS100ATA_R_20200010000_01D_30S_MO.rnx	FileOpenControl
+2020-02-21 19:48:59.813	Info	Sp3File，载入了： E:\[Work]\[思&写&投]\GDP\周跳绘图\COD0MGXFIN_20200010000_01D_05M_ORB.SP3	FileOpenControl
+2020-02-21 19:49:06.400	Warn	COD0MGXFIN_20200010000_01D_05M_ORB.SP3星历略过 EOF	AbstractTimedStreamReader`1
+2020-02-21 19:49:06.400	Info	完全加载了星历文件到内存 COD0MGXFIN_20200010000_01D_05M_ORB.SP3	AbstractTimedStreamReader`1
+2020-02-21 19:49:06.470	Warn	当前SP3文件 组合多文件星历  没有这颗卫星的信息 J07	MultiSatProductService`1
+2020-02-21 19:49:32.457	Warn	COD0MGXFIN_20200010000_01D_05M_ORB.SP3星历略过 EOF	AbstractTimedStreamReader`1
+2020-02-21 19:49:32.457	Info	完全加载了星历文件到内存 COD0MGXFIN_20200010000_01D_05M_ORB.SP3	AbstractTimedStreamReader`1
+2020-02-21 19:49:32.486	Warn	当前SP3文件 组合多文件星历  没有这颗卫星的信息 J07	MultiSatProductService`1
+2020-02-21 19:52:15.097	Info	Obs File，载入了： Data\hers0010.18O	FileOpenControl
+2020-02-21 19:52:19.559	Info	Obs File，载入了： E:\[Work]\[思&写&投]\GDP\周跳绘图\CAS100ATA_R_20200010000_01D_30S_MO.rnx	FileOpenControl
+2020-02-21 19:52:29.351	Info	Sp3File，载入了： E:\[Work]\[思&写&投]\GDP\周跳绘图\COD0MGXFIN_20200010000_01D_05M_ORB.SP3	FileOpenControl
+2020-02-21 19:58:15.607	Info	Obs File，载入了： Data\hers0010.18O	FileOpenControl
+2020-02-21 19:58:19.701	Info	Obs File，载入了： E:\[Work]\[思&写&投]\GDP\周跳绘图\CAS100ATA_R_20200010000_01D_30S_MO.rnx	FileOpenControl
+2020-02-21 19:58:29.851	Info	Sp3File，载入了： E:\[Work]\[思&写&投]\GDP\周跳绘图\COD0MGXFIN_20200010000_01D_05M_ORB.SP3	FileOpenControl
+2020-02-21 20:00:39.438	Warn	COD0MGXFIN_20200010000_01D_05M_ORB.SP3星历略过 EOF	AbstractTimedStreamReader`1
+2020-02-21 20:00:39.438	Info	完全加载了星历文件到内存 COD0MGXFIN_20200010000_01D_05M_ORB.SP3	AbstractTimedStreamReader`1
+2020-02-21 20:00:39.500	Warn	当前SP3文件 组合多文件星历  没有这颗卫星的信息 J07	MultiSatProductService`1
+2020-02-21 20:00:39.501	Warn	当前SP3文件 组合多文件星历  没有这颗卫星的信息 C02	MultiSatProductService`1
+2020-02-21 20:00:39.501	Warn	当前SP3文件 组合多文件星历  没有这颗卫星的信息 C03	MultiSatProductService`1
+2020-02-21 20:00:39.501	Warn	当前SP3文件 组合多文件星历  没有这颗卫星的信息 C04	MultiSatProductService`1
+2020-02-21 20:00:39.502	Warn	当前SP3文件 组合多文件星历  没有这颗卫星的信息 C01	MultiSatProductService`1
+2020-02-21 20:00:42.915	Warn	当前SP3文件 组合多文件星历  没有这颗卫星的信息 C05	MultiSatProductService`1
+2020-02-21 20:01:01.025	Warn	COD0MGXFIN_20200010000_01D_05M_ORB.SP3星历略过 EOF	AbstractTimedStreamReader`1
+2020-02-21 20:01:01.025	Info	完全加载了星历文件到内存 COD0MGXFIN_20200010000_01D_05M_ORB.SP3	AbstractTimedStreamReader`1
+2020-02-21 20:01:01.057	Warn	当前SP3文件 组合多文件星历  没有这颗卫星的信息 J07	MultiSatProductService`1
+2020-02-21 20:01:01.058	Warn	当前SP3文件 组合多文件星历  没有这颗卫星的信息 C02	MultiSatProductService`1
+2020-02-21 20:01:01.058	Warn	当前SP3文件 组合多文件星历  没有这颗卫星的信息 C03	MultiSatProductService`1
+2020-02-21 20:01:01.059	Warn	当前SP3文件 组合多文件星历  没有这颗卫星的信息 C04	MultiSatProductService`1
+2020-02-21 20:01:01.059	Warn	当前SP3文件 组合多文件星历  没有这颗卫星的信息 C01	MultiSatProductService`1
+2020-02-21 20:01:05.610	Warn	当前SP3文件 组合多文件星历  没有这颗卫星的信息 C05	MultiSatProductService`1
+2020-02-21 20:01:23.585	Warn	COD0MGXFIN_20200010000_01D_05M_ORB.SP3星历略过 EOF	AbstractTimedStreamReader`1
+2020-02-21 20:01:23.585	Info	完全加载了星历文件到内存 COD0MGXFIN_20200010000_01D_05M_ORB.SP3	AbstractTimedStreamReader`1

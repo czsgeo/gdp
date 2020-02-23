@@ -415,10 +415,34 @@ namespace Gdp.Data.Rinex
                 return PhaseRangeA - PhaseRangeB; 
             }
         }
+        /// <summary>
+        /// MultiPath FrequenceA (m)
+        /// </summary>
+        public double Mp1Value
+        {
+            get
+            {
+                return RangeA.Value + PhaseRangeA * (1 + constAfa) / (1 - constAfa) - PhaseRangeB * 2 / (1 - constAfa);
+            }
+        }
+
+        /// <summary>
+        /// MultiPath FrequenceB (m)
+        /// </summary>
+        public double Mp2Value
+        {
+            get
+            {
+                return RangeB.Value + PhaseRangeA * 2 * constAfa / (1 - constAfa) - PhaseRangeB * (1 + constAfa) / (1 - constAfa);
+            }
+        }
+
         public Frequence FrequenceA => Frequence.GetFrequenceA(this.Prn, this.ReciverTime);
         public Frequence FrequenceB => Frequence.GetFrequenceB(this.Prn, this.ReciverTime);
         public double PhaseRangeA => FrequenceA.WaveLength * ((this.PhaseA==null)? 0:  this.PhaseA.Value);
         public double PhaseRangeB => FrequenceB.WaveLength * ((this.PhaseB == null) ? 0 : this.PhaseB.Value);
+
+        public double constAfa => FrequenceA.Value* FrequenceA.Value / (FrequenceB.Value * FrequenceB.Value);
         /// <summary>
         /// MW 周单位
         /// </summary>

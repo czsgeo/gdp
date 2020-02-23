@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
 namespace Gdp
 {
@@ -108,6 +109,273 @@ namespace Gdp
                     }
                 }
             }
+            return table;
+        }
+
+        static public ObjectTableStorage GetMp1Table(RinexObsFile ObsFile, FileEphemerisService FileEphemerisService, double maxGfDiffer = 0.15, double maxMwDiffer = 2)
+        {
+            var table = new ObjectTableStorage("Mp1 values of " + ObsFile.SiteInfo.SiteName);
+            var prns = ObsFile.GetPrns();
+            double interval = ObsFile.Header.Interval;
+
+            foreach (var prn in prns)
+            {
+                
+                double lastGfVal = 0;
+                double lastMwVal = 0;
+                Time lastTime = null;
+                Time firstTime = null;
+                List<Time> Times = new List<Time>();
+                List<double> DataMp1 = new List<double>();
+
+                Dictionary<Time, double> dicMp1 = new Dictionary<Time, double>();
+
+                foreach (var epoch in ObsFile)
+                {
+                    dicMp1.Add(epoch.ReceiverTime, Double.NaN);
+
+                    if (epoch.Contains(prn))
+                    {
+                        var sat = epoch[prn];
+                        if (sat.PhaseA == null || sat.PhaseB == null || sat.RangeA == null)
+                        {
+                            lastGfVal = 0;
+                            lastMwVal = 0;
+                            Times = new List<Time>();
+                            DataMp1 = new List<double>();
+                            firstTime = null;
+                            // table.AddItem(strEpoch, " ");         
+                            continue;
+                        }
+
+                        if (firstTime == null)
+                        {
+                            lastTime = epoch.ReceiverTime;
+                            firstTime = epoch.ReceiverTime;
+                        }
+
+                        if (lastGfVal == 0 || lastMwVal == 0)
+                        {
+                            lastGfVal = sat.GfValue;
+                            lastMwVal = sat.MwCycle;
+                        }
+
+                        var differGf = Math.Abs(sat.GfValue - lastGfVal);
+                        var differMw = Math.Abs(sat.MwCycle - lastMwVal);
+
+
+                        if (epoch.ReceiverTime - lastTime > interval + 0.05 || differGf > maxGfDiffer || differMw > maxMwDiffer)
+                        {
+
+                            double averageMp1 = DataMp1.Average();
+                          
+                            //if (Times.Count < 40)
+                            //{ 
+                            //    continue;
+                            //Times = new List<Time>();
+                            //DataMp1 = new List<double>();
+                            //DataMp2 = new List<double>();
+                            //firstTime = epoch.ReceiverTime;
+                            //lastGfVal = 0;
+                            //lastMwVal = 0;
+                            //}
+                            for (int i = 0; i < Times.Count - 1; i++)
+                            {
+                                double elevation = 10;
+                                if (FileEphemerisService != null)
+                                {
+                                    var eph = FileEphemerisService.Get(sat.Prn, epoch.ReceiverTime);
+                                    if (eph != null)
+                                    {
+                                        var polar = CoordTransformer.XyzToGeoPolar(eph.XYZ, ObsFile.Header.ApproxXyz);
+                                        elevation = polar.Elevation;
+                                    }
+                                }
+
+                                if (dicMp1.ContainsKey(Times[i]) && elevation > 10) //如有星历时，最好剔除低高度，避免周跳等
+                                { dicMp1[Times[i]] = DataMp1[i] - averageMp1; }
+                                else
+                                {
+                                    dicMp1.Add(Times[i], DataMp1[i] - averageMp1);
+                                }
+                            }
+
+                            Times = new List<Time>();
+                            DataMp1 = new List<double>();
+                          
+                            firstTime = epoch.ReceiverTime;
+
+                        }
+
+                        Times.Add(epoch.ReceiverTime);
+                        DataMp1.Add(sat.Mp1Value);
+
+                        lastTime = epoch.ReceiverTime;
+                        lastGfVal = sat.GfValue;
+                        lastMwVal = sat.MwCycle;
+                    }
+                }
+
+
+                table.NewRow();
+                table.AddItem("Prn", prn.ToString());
+                foreach(var item in dicMp1)
+                {
+                    string strEpoch = item.Key.Hour.ToString() + ":" + item.Key.Minute.ToString() + ":" + item.Key.Seconds.ToString();
+                    if (item.Value == Double.NaN)
+                    {
+                        table.AddItem(strEpoch, " ");
+                    }
+                    else
+                    {
+                        table.AddItem(strEpoch, item.Value);
+                    }
+                }
+            }
+
+
+
+
+
+
+
+
+
+
+
+            return table;
+        }
+
+
+        static public ObjectTableStorage GetMp2Table(RinexObsFile ObsFile, FileEphemerisService FileEphemerisService, double maxGfDiffer = 0.15, double maxMwDiffer = 5)
+        {
+            var table = new ObjectTableStorage("Mp2 values of " + ObsFile.SiteInfo.SiteName);
+            var prns = ObsFile.GetPrns();
+            double interval = ObsFile.Header.Interval;
+
+            foreach (var prn in prns)
+            {
+
+                double lastGfVal = 0;
+                double lastMwVal = 0;
+                Time lastTime = null;
+                Time firstTime = null;
+                List<Time> Times = new List<Time>();
+
+                List<double> DataMp2 = new List<double>();
+
+                Dictionary<Time, double> dicMp2 = new Dictionary<Time, double>();
+
+                foreach (var epoch in ObsFile)
+                {
+                    dicMp2.Add(epoch.ReceiverTime, Double.NaN);
+
+                    if (epoch.Contains(prn))
+                    {
+                        var sat = epoch[prn];
+                        if (sat.PhaseA == null || sat.PhaseB == null || sat.RangeA == null || sat.RangeB == null)
+                        {
+                            lastGfVal = 0;
+                            lastMwVal = 0;
+                            Times = new List<Time>();
+                            DataMp2 = new List<double>();
+                            firstTime = null;
+                            // table.AddItem(strEpoch, " ");         
+                            continue;
+                        }
+
+                        if (firstTime == null)
+                        {
+                            lastTime = epoch.ReceiverTime;
+                            firstTime = epoch.ReceiverTime;
+                        }
+
+                        if (lastGfVal == 0 || lastMwVal == 0)
+                        {
+                            lastGfVal = sat.GfValue;
+                            lastMwVal = sat.MwCycle;
+                        }
+
+                        var differGf = Math.Abs(sat.GfValue - lastGfVal);
+                        var differMw = Math.Abs(sat.MwCycle - lastMwVal);
+
+                        if (epoch.ReceiverTime - lastTime > interval + 0.05 || differGf > maxGfDiffer || differMw > maxMwDiffer)
+                        {
+
+                            double averageMp2 = DataMp2.Average();
+                            //if (Times.Count < 40)
+                            //{ 
+                            //    continue;
+                            //Times = new List<Time>();
+                            //DataMp1 = new List<double>();
+                            //DataMp2 = new List<double>();
+                            //firstTime = epoch.ReceiverTime;
+                            //lastGfVal = 0;
+                            //lastMwVal = 0;
+                            //}
+                            for (int i = 0; i < Times.Count - 1; i++)
+                            {
+                                double elevation = 10;
+                                if (FileEphemerisService != null)
+                                {
+                                    var eph = FileEphemerisService.Get(sat.Prn, epoch.ReceiverTime);
+                                    if (eph != null)
+                                    {
+                                        var polar = CoordTransformer.XyzToGeoPolar(eph.XYZ, ObsFile.Header.ApproxXyz);
+                                        elevation = polar.Elevation;
+                                    }
+                                }
+
+                                if (dicMp2.ContainsKey(Times[i]) && elevation > 10) //如有星历时，最好剔除低高度，避免周跳等
+                                { dicMp2[Times[i]] = DataMp2[i] - averageMp2; }
+                                else
+                                {
+                                    dicMp2.Add(Times[i], DataMp2[i] - averageMp2);
+                                }
+                            }
+
+                            Times = new List<Time>();
+                            DataMp2 = new List<double>();
+                            firstTime = epoch.ReceiverTime;
+
+                        }
+
+                        Times.Add(epoch.ReceiverTime);
+                        DataMp2.Add(sat.Mp2Value);
+
+                        lastTime = epoch.ReceiverTime;
+                        lastGfVal = sat.GfValue;
+                        lastMwVal = sat.MwCycle;
+                    }
+                }
+
+
+                table.NewRow();
+                table.AddItem("Prn", prn.ToString());
+                foreach (var item in dicMp2)
+                {
+                    string strEpoch = item.Key.Hour.ToString() + ":" + item.Key.Minute.ToString() + ":" + item.Key.Seconds.ToString();
+                    if (item.Value == Double.NaN)
+                    {
+                        table.AddItem(strEpoch, " ");
+                    }
+                    else
+                    {
+                        table.AddItem(strEpoch, item.Value);
+                    }
+                }
+            }
+
+
+
+
+
+
+
+
+
+
+
             return table;
         }
         static public ObjectTableStorage GetRangeErrorTable(RinexObsFile ObsFile, double k1, double k2, FileEphemerisService FileEphemerisService)

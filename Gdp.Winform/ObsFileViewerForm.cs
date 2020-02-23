@@ -398,5 +398,28 @@ namespace Gdp.Winform
             new TableObjectViewForm(table).Show();
 
         }
+
+        private void button_mpTable_Click(object sender, EventArgs e)
+        {
+            if (this.ObsFile == null || this.FileEphemerisService==null)
+            {
+                Gdp.Utils.FormUtil.ShowWarningMessageBox("Please read file first.");
+                return;
+            }
+            var table = ObsFileAnalyzer.GetMp1Table(this.ObsFile, FileEphemerisService);
+            new TableObjectViewForm(table).Show();
+
+        }
+
+        private void button_mp2table_Click(object sender, EventArgs e)
+        {
+            if (this.ObsFile == null || this.FileEphemerisService == null)
+            {
+                Gdp.Utils.FormUtil.ShowWarningMessageBox("Please read file first.");
+                return;
+            }
+            var table = ObsFileAnalyzer.GetMp2Table(this.ObsFile, FileEphemerisService);
+            new TableObjectViewForm(table).Show();
+        }
     }
 }
