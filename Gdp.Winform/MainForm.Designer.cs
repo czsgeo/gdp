@@ -42,6 +42,8 @@
             this.button_tableView = new System.Windows.Forms.Button();
             this.button_openLog = new System.Windows.Forms.Button();
             this.button_testobs = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button_convert
@@ -109,7 +111,9 @@
             this.linkLabel_gnsserSite.AutoSize = true;
             this.linkLabel_gnsserSite.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel_gnsserSite.Font = new System.Drawing.Font("宋体", 12F);
-            this.linkLabel_gnsserSite.Location = new System.Drawing.Point(116, 439);
+            this.linkLabel_gnsserSite.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.linkLabel_gnsserSite.LinkColor = System.Drawing.SystemColors.HotTrack;
+            this.linkLabel_gnsserSite.Location = new System.Drawing.Point(108, -1);
             this.linkLabel_gnsserSite.Name = "linkLabel_gnsserSite";
             this.linkLabel_gnsserSite.Size = new System.Drawing.Size(120, 16);
             this.linkLabel_gnsserSite.TabIndex = 9;
@@ -123,7 +127,9 @@
             this.linkLabel_163mail.AutoSize = true;
             this.linkLabel_163mail.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel_163mail.Font = new System.Drawing.Font("宋体", 12F);
-            this.linkLabel_163mail.Location = new System.Drawing.Point(556, 439);
+            this.linkLabel_163mail.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.linkLabel_163mail.LinkColor = System.Drawing.SystemColors.HotTrack;
+            this.linkLabel_163mail.Location = new System.Drawing.Point(558, -1);
             this.linkLabel_163mail.Name = "linkLabel_163mail";
             this.linkLabel_163mail.Size = new System.Drawing.Size(120, 16);
             this.linkLabel_163mail.TabIndex = 11;
@@ -137,7 +143,8 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("宋体", 10F);
-            this.label2.Location = new System.Drawing.Point(12, 440);
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label2.Location = new System.Drawing.Point(4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(98, 14);
             this.label2.TabIndex = 8;
@@ -149,7 +156,8 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("宋体", 10F);
-            this.label3.Location = new System.Drawing.Point(435, 440);
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label3.Location = new System.Drawing.Point(440, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(105, 14);
             this.label3.TabIndex = 10;
@@ -187,7 +195,7 @@
             this.button_openLog.Name = "button_openLog";
             this.button_openLog.Size = new System.Drawing.Size(116, 82);
             this.button_openLog.TabIndex = 6;
-            this.button_openLog.Text = "Open Log";
+            this.button_openLog.Text = "Log";
             this.button_openLog.UseVisualStyleBackColor = false;
             this.button_openLog.Click += new System.EventHandler(this.button_openLog_Click);
             // 
@@ -199,9 +207,22 @@
             this.button_testobs.Name = "button_testobs";
             this.button_testobs.Size = new System.Drawing.Size(116, 82);
             this.button_testobs.TabIndex = 6;
-            this.button_testobs.Text = "Parse Obs Test";
+            this.button_testobs.Text = "Test";
             this.button_testobs.UseVisualStyleBackColor = false;
             this.button_testobs.Click += new System.EventHandler(this.button_testobs_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.linkLabel_163mail);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.linkLabel_gnsserSite);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 447);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(688, 16);
+            this.panel1.TabIndex = 12;
             // 
             // MainForm
             // 
@@ -210,10 +231,6 @@
             this.BackgroundImage = global::Gdp.Winform.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(688, 463);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.linkLabel_163mail);
-            this.Controls.Add(this.linkLabel_gnsserSite);
             this.Controls.Add(this.button_testobs);
             this.Controls.Add(this.button_openLog);
             this.Controls.Add(this.button_tableView);
@@ -223,10 +240,13 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button_select);
             this.Controls.Add(this.button_convert);
+            this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GDP - GNSS Data Preprocessor v1.0";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -247,5 +267,6 @@
         private System.Windows.Forms.Button button_tableView;
         private System.Windows.Forms.Button button_openLog;
         private System.Windows.Forms.Button button_testobs;
+        private System.Windows.Forms.Panel panel1;
     }
 }

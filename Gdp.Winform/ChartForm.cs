@@ -41,9 +41,41 @@ namespace Gdp.Winform
                 }
 
                 var series =  chart1.Series.Add(prn.ToString());  
-                series.Color = Color.DarkBlue;
-                //    series.IsValueShownAsLabel = true;
-                series.IsVisibleInLegend = false;
+
+                var color =  Color.DarkBlue;
+         
+                switch (prn.SatelliteType)
+                {
+                    case SatelliteType.U:
+                        break;
+                    case SatelliteType.G:
+                        color = Color.Blue;
+                        break;
+                    case SatelliteType.R:
+                        color = Color.DimGray;
+                        break;
+                    case SatelliteType.S:
+                        break;
+                    case SatelliteType.E:
+                        color = Color.DarkSeaGreen;
+                        break;
+                    case SatelliteType.C:
+                        color = Color.OrangeRed;
+                        break;
+                    case SatelliteType.M:
+                        break;
+                    case SatelliteType.J:
+                        break;
+                    case SatelliteType.D:
+                        break;
+                    case SatelliteType.I:
+                        break;
+                    default:
+                        break;
+                }
+                series.Color = color;
+           //    series.IsValueShownAsLabel = true;
+           series.IsVisibleInLegend = false;
                 series.ChartType = SeriesChartType.Point;
                 series.Points.DataBindXY(txData, tyData);
                 series.BorderWidth = 1;

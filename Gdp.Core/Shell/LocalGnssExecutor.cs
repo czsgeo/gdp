@@ -1,5 +1,6 @@
 ﻿//2015.01.18, czs, create in namu, 为了满足控制台程序需求，特建立此项目
 //2019.12.12, czs, edit in hongqing, 迁移到 .net standard, Net Core App
+//2020.02.21, czs, edit in hongqing, 增加信息提取功能
 
 using System;
 using System.Collections.Generic;
@@ -39,9 +40,10 @@ namespace Gdp
 
 
             CmdParam cmdParam = CmdParam.ParseParams(args);
-            if (cmdParam == null) { log.Error("Empty params！"); 
+            if (cmdParam == null) {
+                log.Error("Empty params！");
                 //此处应该显示版本helper等
-
+                ShowHelp();
                 return;
             }
  
@@ -54,11 +56,7 @@ namespace Gdp
                 switch (cmdParam.SolveType)
                 {
                     case ProcessType.H:
-                        if (File.Exists(Setting.HelpDocument))
-                        {
-                            var help = File.ReadAllText(Setting.HelpDocument);
-                            System.Console.WriteLine(help);
-                        }
+                        ShowHelp();
                         break;
                     case ProcessType.V:
                         System.Console.WriteLine( "Version: " + Setting.Version.ToString("0.0"));
@@ -75,8 +73,7 @@ namespace Gdp
                     case ProcessType.S:
                         Select(args);
                         break;
-                    case ProcessType.C:
-                       
+                    case ProcessType.C:                       
                         ConvertToOneTable(args);
                         break;
                     case ProcessType.E:
@@ -98,6 +95,15 @@ namespace Gdp
 
             //暂停屏幕
             //    System.Console.ReadLine();
+        }
+
+        private static void ShowHelp()
+        {
+            if (File.Exists(Setting.HelpDocument))
+            {
+                var help = File.ReadAllText(Setting.HelpDocument);
+                System.Console.WriteLine(help);
+            }
         }
 
         private static void ExtractSiteInfo(string[] args)
