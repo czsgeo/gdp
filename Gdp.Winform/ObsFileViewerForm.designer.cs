@@ -67,6 +67,7 @@
             this.删除此星DToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.删除历元不全的卫星AToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.button_mp1Table = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -216,6 +217,7 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.button_mp1Table);
             this.tabPage4.Controls.Add(this.namedFloatControl_k2);
             this.tabPage4.Controls.Add(this.namedFloatControl_k1);
             this.tabPage4.Controls.Add(this.namedFloatControl_mwthreshold);
@@ -458,7 +460,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(755, 404);
+            this.tabPage2.Size = new System.Drawing.Size(577, 313);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "File Info";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -469,7 +471,7 @@
             this.richTextBoxControl_info.Location = new System.Drawing.Point(3, 3);
             this.richTextBoxControl_info.MaxAppendLineCount = 5000;
             this.richTextBoxControl_info.Name = "richTextBoxControl_info";
-            this.richTextBoxControl_info.Size = new System.Drawing.Size(749, 398);
+            this.richTextBoxControl_info.Size = new System.Drawing.Size(571, 307);
             this.richTextBoxControl_info.TabIndex = 0;
             this.richTextBoxControl_info.Text = "";
             // 
@@ -494,6 +496,16 @@
             this.删除历元不全的卫星AToolStripMenuItem.Size = new System.Drawing.Size(297, 22);
             this.删除历元不全的卫星AToolStripMenuItem.Text = "Delete sats with incomplete epochs(&A)";
             this.删除历元不全的卫星AToolStripMenuItem.Click += new System.EventHandler(this.DeleteSatellitesWithoutFullEpochesAToolStripMenuItem_Click);
+            // 
+            // button_mp1Table
+            // 
+            this.button_mp1Table.Location = new System.Drawing.Point(496, 34);
+            this.button_mp1Table.Name = "button_mp1Table";
+            this.button_mp1Table.Size = new System.Drawing.Size(100, 23);
+            this.button_mp1Table.TabIndex = 36;
+            this.button_mp1Table.Text = "Mp1 Table";
+            this.button_mp1Table.UseVisualStyleBackColor = true;
+            this.button_mp1Table.Click += new System.EventHandler(this.button_mp1Table_Click);
             // 
             // ObsFileViewerForm
             // 
@@ -572,5 +584,6 @@
         private Controls.NamedFloatControl namedFloatControl_k2;
         private Controls.NamedFloatControl namedFloatControl_k1;
         private System.Windows.Forms.Button button_rangeError;
+        private System.Windows.Forms.Button button_mp1Table;
     }
 }

@@ -398,5 +398,20 @@ namespace Gdp.Winform
             new TableObjectViewForm(table).Show();
 
         }
+
+        private void button_mp1Table_Click(object sender, EventArgs e)
+        {
+            if (this.ObsFile == null)
+            {
+                Gdp.Utils.FormUtil.ShowWarningMessageBox("Please read file first.");
+                return;
+            }
+            var table = ObsFileAnalyzer.GetRangeErrorTable(this.ObsFile,
+                                                           this.namedFloatControl_k1.GetValue(),
+                                                           this.namedFloatControl_k2.GetValue(),
+                                                           FileEphemerisService);
+            new TableObjectViewForm(table).Show();
+
+        }
     }
 }
