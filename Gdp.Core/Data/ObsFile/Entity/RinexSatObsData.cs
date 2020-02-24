@@ -430,6 +430,20 @@ namespace Gdp.Data.Rinex
         }
 
 
+        /// <summary>
+        /// MultiPath FrequenceB (m)
+        /// </summary>
+        public double Mp2Value
+        {
+            //  double constAfa = FrequenceA.Value * FrequenceA.Value / (FrequenceB.Value * FrequenceB.Value);
+            get
+            {
+                double constAfa = FrequenceA.Value * FrequenceA.Value / (FrequenceB.Value * FrequenceB.Value);
+                return RangeB.Value + PhaseRangeA * 2 * constAfa / (1 - constAfa) - PhaseRangeB * (1 + constAfa) / (1 - constAfa);
+            }
+        }
+
+
 
 
         public Frequence FrequenceA => Frequence.GetFrequenceA(this.Prn, this.ReciverTime);
@@ -439,7 +453,7 @@ namespace Gdp.Data.Rinex
         /// <summary>
         /// MW 周单位
         /// </summary>
-        public double MwCycle => MwValue * Math.Abs(FrequenceA.Value - FrequenceB.Value);
+        public double MwCycle => MwValue* Math.Abs(FrequenceA.Value - FrequenceB.Value) * 1E6 / GeoConst.LIGHT_SPEED;
         /// <summary>
         /// whether has gross error in range.
         /// </summary>
