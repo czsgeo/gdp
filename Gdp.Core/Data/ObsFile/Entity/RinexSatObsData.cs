@@ -415,6 +415,23 @@ namespace Gdp.Data.Rinex
                 return PhaseRangeA - PhaseRangeB; 
             }
         }
+
+
+        /// <summary>
+        /// MultiPath FrequenceA (m)
+        /// </summary>
+        public double Mp1Value
+        {
+            //  double constAfa = FrequenceA.Value * FrequenceA.Value / (FrequenceB.Value * FrequenceB.Value);
+            get
+            {
+                return RangeA.Value + PhaseRangeA * (1 + FrequenceA.Value * FrequenceA.Value / (FrequenceB.Value * FrequenceB.Value)) / (1 - FrequenceA.Value * FrequenceA.Value / (FrequenceB.Value * FrequenceB.Value)) - PhaseRangeB * 2 / (1 - FrequenceA.Value * FrequenceA.Value / (FrequenceB.Value * FrequenceB.Value));
+            }
+        }
+
+
+
+
         public Frequence FrequenceA => Frequence.GetFrequenceA(this.Prn, this.ReciverTime);
         public Frequence FrequenceB => Frequence.GetFrequenceB(this.Prn, this.ReciverTime);
         public double PhaseRangeA => FrequenceA.WaveLength * ((this.PhaseA==null)? 0:  this.PhaseA.Value);
