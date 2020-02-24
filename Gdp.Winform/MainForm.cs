@@ -102,7 +102,7 @@ namespace Gdp.Winform
                     ObsFileFormater.Init();
                     ObsFileFormater.Run();
                 }
-                Utils.FormUtil.ShowOkMessageBox("执行完毕lly！");
+                Utils.FormUtil.ShowOkMessageBox("执行完毕！");
 
 
             }
