@@ -104,6 +104,12 @@ namespace Gdp.Data.Rinex
         public RinexObsValue PhaseB { get { return GetRinexObsValue(FrequenceType.B, "L"); } }
 
         /// <summary>
+        /// L3 返回第一个匹配非0结果, 无则为null
+        /// </summary>
+        public RinexObsValue PhaseC { get { return GetRinexObsValue(FrequenceType.C, "L"); } }
+
+
+        /// <summary>
         /// P1 or C1 返回第一个匹配非0结果, 无则为null
         /// </summary>
         public RinexObsValue RangeA { get { return GetRinexObsValue(FrequenceType.A, "P","C"); } }
@@ -112,6 +118,13 @@ namespace Gdp.Data.Rinex
         /// P2 or C2 返回第一个匹配非0结果, 无则为null
         /// </summary>
         public RinexObsValue RangeB { get { return GetRinexObsValue(FrequenceType.B, "P", "C"); } }
+
+        /// <summary> 
+        /// P3 or C3 返回第一个匹配非0结果, 无则为null
+        /// </summary>
+        public RinexObsValue RangeC { get { return GetRinexObsValue(FrequenceType.C, "P", "C"); } }
+
+
         public RinexObsValue RangeA_CA => GetRinexObsValue(FrequenceType.A, "C");
         public RinexObsValue RangeA_P => GetRinexObsValue(FrequenceType.A, "P"); 
 
@@ -421,11 +434,11 @@ namespace Gdp.Data.Rinex
         /// MultiPath FrequenceA (m)
         /// </summary>
         public double Mp1Value
-        {
-            //  double constAfa = FrequenceA.Value * FrequenceA.Value / (FrequenceB.Value * FrequenceB.Value);
+        {    
             get
             {
-                return RangeA.Value + PhaseRangeA * (1 + FrequenceA.Value * FrequenceA.Value / (FrequenceB.Value * FrequenceB.Value)) / (1 - FrequenceA.Value * FrequenceA.Value / (FrequenceB.Value * FrequenceB.Value)) - PhaseRangeB * 2 / (1 - FrequenceA.Value * FrequenceA.Value / (FrequenceB.Value * FrequenceB.Value));
+                double m12 = (FrequenceA.Value * FrequenceA.Value + FrequenceB.Value * FrequenceB.Value) / (FrequenceA.Value * FrequenceA.Value - FrequenceB.Value * FrequenceB.Value);
+                return RangeA.Value - m12 * PhaseRangeA + (m12 - 1) * PhaseRangeB;
             }
         }
 
@@ -435,21 +448,38 @@ namespace Gdp.Data.Rinex
         /// </summary>
         public double Mp2Value
         {
-            //  double constAfa = FrequenceA.Value * FrequenceA.Value / (FrequenceB.Value * FrequenceB.Value);
             get
             {
-                double constAfa = FrequenceA.Value * FrequenceA.Value / (FrequenceB.Value * FrequenceB.Value);
-                return RangeB.Value + PhaseRangeA * 2 * constAfa / (1 - constAfa) - PhaseRangeB * (1 + constAfa) / (1 - constAfa);
+                //double constAfa = FrequenceA.Value * FrequenceA.Value / (FrequenceB.Value * FrequenceB.Value);
+                //return RangeB.Value + PhaseRangeA * 2 * constAfa / (1 - constAfa) - PhaseRangeB * (1 + constAfa) / (1 - constAfa);
+                double m21 = ( FrequenceB.Value * FrequenceB.Value+ FrequenceA.Value * FrequenceA.Value) / (FrequenceB.Value * FrequenceB.Value - FrequenceA.Value * FrequenceA.Value);
+                return RangeB.Value - m21 * PhaseRangeB + (m21 - 1) * PhaseRangeA;
+            }
+        }
+
+        /// <summary>
+        /// MultiPath FrequenceC (m)
+        /// </summary>
+        public double Mp3Value
+        {
+            get
+            {
+                double m31 = (FrequenceC.Value * FrequenceC.Value + FrequenceA.Value * FrequenceA.Value) / (FrequenceC.Value * FrequenceC.Value - FrequenceA.Value * FrequenceA.Value);
+                return RangeC.Value - m31 * PhaseRangeC + (m31 - 1) * PhaseRangeA;
             }
         }
 
 
-
-
         public Frequence FrequenceA => Frequence.GetFrequenceA(this.Prn, this.ReciverTime);
         public Frequence FrequenceB => Frequence.GetFrequenceB(this.Prn, this.ReciverTime);
+
+        public Frequence FrequenceC => Frequence.GetFrequenceC(this.Prn, this.ReciverTime);
+
+
         public double PhaseRangeA => FrequenceA.WaveLength * ((this.PhaseA==null)? 0:  this.PhaseA.Value);
         public double PhaseRangeB => FrequenceB.WaveLength * ((this.PhaseB == null) ? 0 : this.PhaseB.Value);
+        public double PhaseRangeC => FrequenceC.WaveLength * ((this.PhaseC == null) ? 0 : this.PhaseC.Value);
+
         /// <summary>
         /// MW 周单位
         /// </summary>

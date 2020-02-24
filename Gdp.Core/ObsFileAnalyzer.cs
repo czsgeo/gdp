@@ -246,7 +246,7 @@ namespace Gdp
 
 
 
-        static public ObjectTableStorage GetMp1Table(RinexObsFile ObsFile, FileEphemerisService FileEphemerisService, double maxGfDiffer = 0.15, double maxMwDiffer = 3)
+        static public ObjectTableStorage GetMp1Table(RinexObsFile ObsFile, FileEphemerisService FileEphemerisService, double maxGfDiffer = 0.15, double maxMwDiffer = 2)
         {
             var table = new ObjectTableStorage("Mp1 values of " + ObsFile.SiteInfo.SiteName);
             var prns = ObsFile.GetPrns();
@@ -348,7 +348,8 @@ namespace Gdp
 
                         Times.Add(epoch.ReceiverTime);
                       //  DataMp1.Add(sat.Mp1Value);
-                        DataMp1.Add(sat.Mp2Value);
+                      //  DataMp1.Add(sat.Mp2Value);
+                        DataMp1.Add(sat.Mp3Value);
                         lastTime = epoch.ReceiverTime;
                         lastGfVal = sat.GfValue;
                         lastMwVal = sat.MwCycle;
