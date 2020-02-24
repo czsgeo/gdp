@@ -336,12 +336,8 @@ namespace Gdp
                 foreach (var item in dicMp1)
                 {
                     string strEpoch = item.Key.Hour.ToString() + ":" + item.Key.Minute.ToString() + ":" + item.Key.Seconds.ToString();
-                    if (item.Value == 0)
-                    {
-                        table.AddItem(strEpoch, " ");
-                    }
-                    else
-                    {
+                    if (item.Value != 0)
+                    {  
                         table.AddItem(strEpoch, item.Value);
                     }
                 }
