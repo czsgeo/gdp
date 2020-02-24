@@ -401,9 +401,9 @@ namespace Gdp.Winform
 
         private void button_mp1Table_Click(object sender, EventArgs e)
         {
-            if (this.ObsFile == null || this.FileEphemerisService == null)
+            if (this.ObsFile == null )//|| this.FileEphemerisService == null //eph is not necesury
             {
-                Gdp.Utils.FormUtil.ShowWarningMessageBox("Please read obs and eph file first.");
+                Gdp.Utils.FormUtil.ShowWarningMessageBox("Please read obs file first.");
                 return;
             }
             var table = ObsFileAnalyzer.GetMp1Table(this.ObsFile, FileEphemerisService);
