@@ -121,9 +121,9 @@ namespace Gdp
                         break;
                     case SatelliteType.C: //215786
                         result[FrequenceType.A] = new List<int>() { 2 , 1};
-                      //  result[FrequenceType.B] = new List<int>() { 1 };
-                        result[FrequenceType.C] = new List<int>() { 7 };//
-                        result[FrequenceType.D] = new List<int>() { 6 }; 
+                        result[FrequenceType.B] = new List<int>() { 7 };
+                        result[FrequenceType.C] = new List<int>() { 6 };//
+                       // result[FrequenceType.D] = new List<int>() { 6 }; 
                         break;
                     case SatelliteType.J:
                         result[FrequenceType.A] = new List<int>() { 1 };

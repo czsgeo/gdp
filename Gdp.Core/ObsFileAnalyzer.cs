@@ -251,9 +251,14 @@ namespace Gdp
             var table = new ObjectTableStorage("Mp1 values of " + ObsFile.SiteInfo.SiteName);
             var prns = ObsFile.GetPrns();
             double interval = ObsFile.Header.Interval;
+            List<double> validData = new List<double>();
 
             foreach (var prn in prns)
             {
+                if (prn.SatelliteType != SatelliteType.C)
+                {
+                    continue;
+                }
                 double lastGfVal = 0;
                 double lastMwVal = 0;
                 Time lastTime = null;
@@ -262,12 +267,13 @@ namespace Gdp
                 List<double> DataMp1 = new List<double>();
 
                 Dictionary<Time, double> dicMp1 = new Dictionary<Time, double>();
-
+               
                 foreach (var epoch in ObsFile)
                 {
                     dicMp1.Add(epoch.ReceiverTime, 0);
                     if (epoch.Contains(prn))
                     {
+                       
                         var sat = epoch[prn];
                         if (FileEphemerisService != null) //如有星历时，最好剔除低高度，避免周跳等
                         {
@@ -284,7 +290,7 @@ namespace Gdp
                             }
                         }
 
-                        if (sat.PhaseA == null || sat.PhaseB == null || sat.RangeA == null || sat.RangeB == null)
+                        if (sat.PhaseA == null ||sat.RangeA == null|| sat.PhaseB == null ||  sat.RangeB == null )//)//)||sat.PhaseC == null || sat.RangeC == null
                         {
                             if (Times.Count > 30)
                             {
@@ -347,26 +353,70 @@ namespace Gdp
                         }
 
                         Times.Add(epoch.ReceiverTime);
-                      //  DataMp1.Add(sat.Mp1Value);
-                      //  DataMp1.Add(sat.Mp2Value);
-                        DataMp1.Add(sat.Mp3Value);
+                       //DataMp1.Add(sat.Mp1Value);
+                        DataMp1.Add(sat.Mp2Value);
+                        // DataMp1.Add(sat.Mp3Value);
                         lastTime = epoch.ReceiverTime;
                         lastGfVal = sat.GfValue;
                         lastMwVal = sat.MwCycle;
+
                     }
                 }
 
+                if (Times.Count > 30) //last arc  
+                {
+                    double averageMp1 = DataMp1.Average();
+                    for (int i = 0; i < Times.Count - 1; i++)
+                    {
+                        if (dicMp1.ContainsKey(Times[i]))
+                        {
+                            dicMp1[Times[i]] = DataMp1[i] - averageMp1;
+                        }
+                    }
+                }
+
+
+                //if (dicMp1.Values.ToList().Sum() == 0)
+                //{
+                //    continue;
+                //}
+                
+
                 table.NewRow();
                 table.AddItem("Prn", prn.ToString());
+                
                 foreach (var item in dicMp1)
                 {
                     string strEpoch = item.Key.Hour.ToString() + ":" + item.Key.Minute.ToString() + ":" + item.Key.Seconds.ToString();
                     if (item.Value != 0)
-                    {  
+                    {
                         table.AddItem(strEpoch, item.Value);
+                        validData.Add(item.Value);
+                    }
+                    else
+                    {
+                        table.AddItem(strEpoch, "");
                     }
                 }
             }
+
+            //RMS to evaluate the MP
+            double average = validData.Average();
+            double countData = 0;
+            double countData1 = 0;
+            for (int i=0;i<validData.Count-1;i++)
+            {
+                countData += (validData[i] - average) * (validData[i] - average);
+                countData1 += validData[i] * validData[i];
+            }
+
+            double rmsMp = Math.Sqrt(countData / validData.Count);
+            double rmsMp1 = Math.Sqrt(countData1 / validData.Count);
+
+            table.NewRow();
+            table.AddItem("rmsMp", rmsMp.ToString());
+            table.AddItem("rmsMp1", rmsMp1.ToString());
+
             return table;
         }
 

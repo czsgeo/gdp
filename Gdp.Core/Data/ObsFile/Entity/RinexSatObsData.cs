@@ -466,6 +466,9 @@ namespace Gdp.Data.Rinex
             {
                 double m31 = (FrequenceC.Value * FrequenceC.Value + FrequenceA.Value * FrequenceA.Value) / (FrequenceC.Value * FrequenceC.Value - FrequenceA.Value * FrequenceA.Value);
                 return RangeC.Value - m31 * PhaseRangeC + (m31 - 1) * PhaseRangeA;
+
+                //double m32 = (FrequenceC.Value * FrequenceC.Value + FrequenceB.Value * FrequenceB.Value) / (FrequenceC.Value * FrequenceC.Value - FrequenceB.Value * FrequenceB.Value);
+                //return RangeC.Value - m32 * PhaseRangeC + (m32 - 1) * PhaseRangeB;
             }
         }
 
