@@ -379,7 +379,7 @@ namespace Gdp.Winform
                 return;
             }
             ChartForm form = new ChartForm();
-            form.DrawVisibility(ObsFile);
+            form.DrawVisibility(ObsFile,12);
             form.Show();
         }
          

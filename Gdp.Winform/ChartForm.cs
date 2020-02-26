@@ -19,7 +19,7 @@ namespace Gdp.Winform
             InitializeComponent();
         }
 
-        public void DrawVisibility(RinexObsFile ObsFile)
+        public void DrawVisibility(RinexObsFile ObsFile, float fontSize = 10)
         {
             this.Text = "Visibility of " +  ObsFile.Header.SiteName;
             chart1.Series.Clear();
@@ -105,18 +105,21 @@ namespace Gdp.Winform
             //    chartArea.AxisY.TextOrientation = TextOrientation.Horizontal;
             chartArea.AxisX.IsLabelAutoFit = true;
          //   chartArea.AxisX.LabelStyle.Angle = 90;
-            chartArea.AxisX.LabelStyle.Format = "HH:mm:ss";
+            chartArea.AxisX.LabelStyle.Format = "HH:mm";
+            chartArea.AxisX.LabelStyle.Font = new Font("Times New Roman", fontSize);
+            //此处无用
+            chartArea.AxisY.LabelStyle.Font = new Font("Times New Roman", fontSize);
             chartArea.AxisX.Minimum = ObsFile.Header.StartTime.DateTime.ToOADate();
             chartArea.AxisX.Maximum = ObsFile.Header.EndTime.DateTime.ToOADate();
 
             var totalHours = (int)(Math.Round(ObsFile.Header.TimePeriod.Span / 3600));//hour
-            double xInterval =  1 / 24.0;// 0.0416666667;
+            double xInterval =  4 / 24.0;// 0.0416666667;
             if (totalHours < 1)//10m
             {
-                xInterval = 1 / 24.0/6;
+                xInterval = 4 / 24.0/6;
             }if(totalHours < 10)//30m
             {
-                xInterval = 1 / 24.0 / 2;
+                xInterval = 4 / 24.0 / 2;
             } 
             chartArea.AxisX.Interval = xInterval;
             chartArea.AxisY.IsLabelAutoFit = true;
@@ -124,11 +127,22 @@ namespace Gdp.Winform
             for (int i = 0; i < prns.Count; i++)
             {
                 var p = prns[i];
+                 
                 chartArea.AxisY.CustomLabels.Add(i+0.5, i+1.5, p.ToString());//
             } 
 
             chartArea.CursorY.IsUserEnabled = true;//设置坐标轴可以用鼠标点击放大
             chartArea.CursorY.IsUserSelectionEnabled = true; //用户可以选择从那里放大
+        }
+
+        private void 调整字体大小FToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            double fontSize = chart1.ChartAreas[0].AxisY.LabelStyle.Font.Size;
+           if (   Gdp.Utils.FormUtil.ShowInputNumeralForm("font size",out fontSize, fontSize))
+            {
+                chart1.ChartAreas[0].AxisY.LabelStyle.Font = new Font(chart1.ChartAreas[0].AxisY.LabelStyle.Font.Name, (float)fontSize);
+                chart1.ChartAreas[0].AxisY.LabelStyle.Font = new Font(chart1.ChartAreas[0].AxisX.LabelStyle.Font.Name, (float)fontSize);
+            }
         }
     }
 }

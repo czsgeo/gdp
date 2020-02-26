@@ -111,7 +111,7 @@
     <Compile Include="Controls\RichTextBoxControl.designer.cs">
       <DependentUpon>RichTextBoxControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormUtil.cs" />
+    <Compile Include="Utils\FormUtil.cs" />
     <Compile Include="IgsProductDownloadForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,6 +204,12 @@
     <Compile Include="Controls\TimePeriodControl.designer.cs">
       <DependentUpon>TimePeriodControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utils\OneTextInputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utils\OneTextInputForm.designer.cs">
+      <DependentUpon>OneTextInputForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ChartForm.resx">
       <DependentUpon>ChartForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -288,6 +294,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\TimePeriodControl.resx">
       <DependentUpon>TimePeriodControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utils\OneTextInputForm.resx">
+      <DependentUpon>OneTextInputForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
