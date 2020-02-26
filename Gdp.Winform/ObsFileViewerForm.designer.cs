@@ -35,17 +35,12 @@
             this.button_viewInOneTable = new System.Windows.Forms.Button();
             this.button_viewSatVisibility = new System.Windows.Forms.Button();
             this.button_drawnVisibility = new System.Windows.Forms.Button();
-            this.fileOpenControl_ofilePath = new Gdp.Winform.Controls.FileOpenControl();
             this.button_read = new System.Windows.Forms.Button();
             this.button_saveTo = new System.Windows.Forms.Button();
             this.checkBox_show1Only = new System.Windows.Forms.CheckBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.namedFloatControl_k2 = new Gdp.Winform.Controls.NamedFloatControl();
-            this.namedFloatControl_k1 = new Gdp.Winform.Controls.NamedFloatControl();
-            this.namedFloatControl_mwthreshold = new Gdp.Winform.Controls.NamedFloatControl();
-            this.namedFloatControl_lithreshold = new Gdp.Winform.Controls.NamedFloatControl();
+            this.button_mp1Table = new System.Windows.Forms.Button();
             this.checkBox_enableSp3 = new System.Windows.Forms.CheckBox();
-            this.fileOpenControl_sp3 = new Gdp.Winform.Controls.FileOpenControl();
             this.button_litable = new System.Windows.Forms.Button();
             this.button_rangeError = new System.Windows.Forms.Button();
             this.button_mwTable = new System.Windows.Forms.Button();
@@ -62,12 +57,19 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.richTextBoxControl_info = new Gdp.Winform.Controls.RichTextBoxControl();
             this.contextMenuStrip_prn = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.删除此星DToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.删除历元不全的卫星AToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.button_mp1Table = new System.Windows.Forms.Button();
+            this.fileOpenControl_ofilePath = new Gdp.Winform.Controls.FileOpenControl();
+            this.namedFloatControl_k2 = new Gdp.Winform.Controls.NamedFloatControl();
+            this.namedFloatControl_k1 = new Gdp.Winform.Controls.NamedFloatControl();
+            this.namedFloatControl_mwthreshold = new Gdp.Winform.Controls.NamedFloatControl();
+            this.namedFloatControl_lithreshold = new Gdp.Winform.Controls.NamedFloatControl();
+            this.fileOpenControl_sp3 = new Gdp.Winform.Controls.FileOpenControl();
+            this.richTextBoxControl_info = new Gdp.Winform.Controls.RichTextBoxControl();
+            this.contextMenuStrip_Sattype = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.removeThisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -87,6 +89,7 @@
             this.tabPage2.SuspendLayout();
             this.contextMenuStrip_prn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            this.contextMenuStrip_Sattype.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -166,23 +169,6 @@
             this.button_drawnVisibility.UseVisualStyleBackColor = true;
             this.button_drawnVisibility.Click += new System.EventHandler(this.button_drawnVisibility_Click);
             // 
-            // fileOpenControl_ofilePath
-            // 
-            this.fileOpenControl_ofilePath.AllowDrop = true;
-            this.fileOpenControl_ofilePath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.fileOpenControl_ofilePath.FilePath = "";
-            this.fileOpenControl_ofilePath.FilePathes = new string[0];
-            this.fileOpenControl_ofilePath.Filter = "文本文件|*.txt|所有文件|*.*";
-            this.fileOpenControl_ofilePath.FirstPath = "";
-            this.fileOpenControl_ofilePath.IsMultiSelect = false;
-            this.fileOpenControl_ofilePath.LabelName = "Obs File:";
-            this.fileOpenControl_ofilePath.Location = new System.Drawing.Point(13, 11);
-            this.fileOpenControl_ofilePath.Name = "fileOpenControl_ofilePath";
-            this.fileOpenControl_ofilePath.Size = new System.Drawing.Size(629, 22);
-            this.fileOpenControl_ofilePath.TabIndex = 0;
-            this.fileOpenControl_ofilePath.FilePathSetted += new System.EventHandler(this.fileOpenControl_ofilePath_FilePathSetted);
-            // 
             // button_read
             // 
             this.button_read.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -218,17 +204,17 @@
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.button_mp1Table);
-            this.tabPage4.Controls.Add(this.namedFloatControl_k2);
-            this.tabPage4.Controls.Add(this.namedFloatControl_k1);
-            this.tabPage4.Controls.Add(this.namedFloatControl_mwthreshold);
-            this.tabPage4.Controls.Add(this.namedFloatControl_lithreshold);
             this.tabPage4.Controls.Add(this.checkBox_enableSp3);
-            this.tabPage4.Controls.Add(this.fileOpenControl_sp3);
             this.tabPage4.Controls.Add(this.button_litable);
             this.tabPage4.Controls.Add(this.button_rangeError);
             this.tabPage4.Controls.Add(this.button_mwTable);
             this.tabPage4.Controls.Add(this.button_mwCycleSlipDetect);
             this.tabPage4.Controls.Add(this.button_csDetect);
+            this.tabPage4.Controls.Add(this.namedFloatControl_k2);
+            this.tabPage4.Controls.Add(this.namedFloatControl_k1);
+            this.tabPage4.Controls.Add(this.namedFloatControl_mwthreshold);
+            this.tabPage4.Controls.Add(this.namedFloatControl_lithreshold);
+            this.tabPage4.Controls.Add(this.fileOpenControl_sp3);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
@@ -237,41 +223,15 @@
             this.tabPage4.Text = "Analyzer";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // namedFloatControl_k2
+            // button_mp1Table
             // 
-            this.namedFloatControl_k2.Location = new System.Drawing.Point(180, 98);
-            this.namedFloatControl_k2.Name = "namedFloatControl_k2";
-            this.namedFloatControl_k2.Size = new System.Drawing.Size(153, 23);
-            this.namedFloatControl_k2.TabIndex = 35;
-            this.namedFloatControl_k2.Title = "Threshold of k2:";
-            this.namedFloatControl_k2.Value = 60D;
-            // 
-            // namedFloatControl_k1
-            // 
-            this.namedFloatControl_k1.Location = new System.Drawing.Point(8, 96);
-            this.namedFloatControl_k1.Name = "namedFloatControl_k1";
-            this.namedFloatControl_k1.Size = new System.Drawing.Size(155, 23);
-            this.namedFloatControl_k1.TabIndex = 35;
-            this.namedFloatControl_k1.Title = "Threshold of k1: ";
-            this.namedFloatControl_k1.Value = 30D;
-            // 
-            // namedFloatControl_mwthreshold
-            // 
-            this.namedFloatControl_mwthreshold.Location = new System.Drawing.Point(8, 63);
-            this.namedFloatControl_mwthreshold.Name = "namedFloatControl_mwthreshold";
-            this.namedFloatControl_mwthreshold.Size = new System.Drawing.Size(177, 23);
-            this.namedFloatControl_mwthreshold.TabIndex = 35;
-            this.namedFloatControl_mwthreshold.Title = "Threshold of MW:";
-            this.namedFloatControl_mwthreshold.Value = 5D;
-            // 
-            // namedFloatControl_lithreshold
-            // 
-            this.namedFloatControl_lithreshold.Location = new System.Drawing.Point(8, 34);
-            this.namedFloatControl_lithreshold.Name = "namedFloatControl_lithreshold";
-            this.namedFloatControl_lithreshold.Size = new System.Drawing.Size(177, 23);
-            this.namedFloatControl_lithreshold.TabIndex = 35;
-            this.namedFloatControl_lithreshold.Title = "Threshold of LI: ";
-            this.namedFloatControl_lithreshold.Value = 5D;
+            this.button_mp1Table.Location = new System.Drawing.Point(496, 34);
+            this.button_mp1Table.Name = "button_mp1Table";
+            this.button_mp1Table.Size = new System.Drawing.Size(100, 23);
+            this.button_mp1Table.TabIndex = 36;
+            this.button_mp1Table.Text = "Mp1 Table";
+            this.button_mp1Table.UseVisualStyleBackColor = true;
+            this.button_mp1Table.Click += new System.EventHandler(this.button_mp1Table_Click);
             // 
             // checkBox_enableSp3
             // 
@@ -284,23 +244,6 @@
             this.checkBox_enableSp3.Text = "Enable";
             this.checkBox_enableSp3.UseVisualStyleBackColor = true;
             this.checkBox_enableSp3.CheckedChanged += new System.EventHandler(this.checkBox_enableSp3_CheckedChanged);
-            // 
-            // fileOpenControl_sp3
-            // 
-            this.fileOpenControl_sp3.AllowDrop = true;
-            this.fileOpenControl_sp3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.fileOpenControl_sp3.Enabled = false;
-            this.fileOpenControl_sp3.FilePath = "";
-            this.fileOpenControl_sp3.FilePathes = new string[0];
-            this.fileOpenControl_sp3.Filter = "Sp3|*.Sp3|文本文件|*.txt|所有文件|*.*";
-            this.fileOpenControl_sp3.FirstPath = "";
-            this.fileOpenControl_sp3.IsMultiSelect = false;
-            this.fileOpenControl_sp3.LabelName = "Sp3File:";
-            this.fileOpenControl_sp3.Location = new System.Drawing.Point(8, 6);
-            this.fileOpenControl_sp3.Name = "fileOpenControl_sp3";
-            this.fileOpenControl_sp3.Size = new System.Drawing.Size(629, 22);
-            this.fileOpenControl_sp3.TabIndex = 32;
             // 
             // button_litable
             // 
@@ -465,16 +408,6 @@
             this.tabPage2.Text = "File Info";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // richTextBoxControl_info
-            // 
-            this.richTextBoxControl_info.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBoxControl_info.Location = new System.Drawing.Point(3, 3);
-            this.richTextBoxControl_info.MaxAppendLineCount = 5000;
-            this.richTextBoxControl_info.Name = "richTextBoxControl_info";
-            this.richTextBoxControl_info.Size = new System.Drawing.Size(571, 307);
-            this.richTextBoxControl_info.TabIndex = 0;
-            this.richTextBoxControl_info.Text = "";
-            // 
             // contextMenuStrip_prn
             // 
             this.contextMenuStrip_prn.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -497,15 +430,99 @@
             this.删除历元不全的卫星AToolStripMenuItem.Text = "Delete sats with incomplete epochs(&A)";
             this.删除历元不全的卫星AToolStripMenuItem.Click += new System.EventHandler(this.DeleteSatellitesWithoutFullEpochesAToolStripMenuItem_Click);
             // 
-            // button_mp1Table
+            // fileOpenControl_ofilePath
             // 
-            this.button_mp1Table.Location = new System.Drawing.Point(496, 34);
-            this.button_mp1Table.Name = "button_mp1Table";
-            this.button_mp1Table.Size = new System.Drawing.Size(100, 23);
-            this.button_mp1Table.TabIndex = 36;
-            this.button_mp1Table.Text = "Mp1 Table";
-            this.button_mp1Table.UseVisualStyleBackColor = true;
-            this.button_mp1Table.Click += new System.EventHandler(this.button_mp1Table_Click);
+            this.fileOpenControl_ofilePath.AllowDrop = true;
+            this.fileOpenControl_ofilePath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.fileOpenControl_ofilePath.FilePath = "";
+            this.fileOpenControl_ofilePath.FilePathes = new string[0];
+            this.fileOpenControl_ofilePath.Filter = "文本文件|*.txt|所有文件|*.*";
+            this.fileOpenControl_ofilePath.FirstPath = "";
+            this.fileOpenControl_ofilePath.IsMultiSelect = false;
+            this.fileOpenControl_ofilePath.LabelName = "Obs File:";
+            this.fileOpenControl_ofilePath.Location = new System.Drawing.Point(13, 11);
+            this.fileOpenControl_ofilePath.Name = "fileOpenControl_ofilePath";
+            this.fileOpenControl_ofilePath.Size = new System.Drawing.Size(629, 22);
+            this.fileOpenControl_ofilePath.TabIndex = 0;
+            this.fileOpenControl_ofilePath.FilePathSetted += new System.EventHandler(this.fileOpenControl_ofilePath_FilePathSetted);
+            // 
+            // namedFloatControl_k2
+            // 
+            this.namedFloatControl_k2.Location = new System.Drawing.Point(180, 98);
+            this.namedFloatControl_k2.Name = "namedFloatControl_k2";
+            this.namedFloatControl_k2.Size = new System.Drawing.Size(153, 23);
+            this.namedFloatControl_k2.TabIndex = 35;
+            this.namedFloatControl_k2.Title = "Threshold of k2:";
+            this.namedFloatControl_k2.Value = 60D;
+            // 
+            // namedFloatControl_k1
+            // 
+            this.namedFloatControl_k1.Location = new System.Drawing.Point(8, 96);
+            this.namedFloatControl_k1.Name = "namedFloatControl_k1";
+            this.namedFloatControl_k1.Size = new System.Drawing.Size(155, 23);
+            this.namedFloatControl_k1.TabIndex = 35;
+            this.namedFloatControl_k1.Title = "Threshold of k1: ";
+            this.namedFloatControl_k1.Value = 30D;
+            // 
+            // namedFloatControl_mwthreshold
+            // 
+            this.namedFloatControl_mwthreshold.Location = new System.Drawing.Point(8, 63);
+            this.namedFloatControl_mwthreshold.Name = "namedFloatControl_mwthreshold";
+            this.namedFloatControl_mwthreshold.Size = new System.Drawing.Size(177, 23);
+            this.namedFloatControl_mwthreshold.TabIndex = 35;
+            this.namedFloatControl_mwthreshold.Title = "Threshold of MW:";
+            this.namedFloatControl_mwthreshold.Value = 5D;
+            // 
+            // namedFloatControl_lithreshold
+            // 
+            this.namedFloatControl_lithreshold.Location = new System.Drawing.Point(8, 34);
+            this.namedFloatControl_lithreshold.Name = "namedFloatControl_lithreshold";
+            this.namedFloatControl_lithreshold.Size = new System.Drawing.Size(177, 23);
+            this.namedFloatControl_lithreshold.TabIndex = 35;
+            this.namedFloatControl_lithreshold.Title = "Threshold of LI: ";
+            this.namedFloatControl_lithreshold.Value = 5D;
+            // 
+            // fileOpenControl_sp3
+            // 
+            this.fileOpenControl_sp3.AllowDrop = true;
+            this.fileOpenControl_sp3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.fileOpenControl_sp3.Enabled = false;
+            this.fileOpenControl_sp3.FilePath = "";
+            this.fileOpenControl_sp3.FilePathes = new string[0];
+            this.fileOpenControl_sp3.Filter = "Sp3|*.Sp3|文本文件|*.txt|所有文件|*.*";
+            this.fileOpenControl_sp3.FirstPath = "";
+            this.fileOpenControl_sp3.IsMultiSelect = false;
+            this.fileOpenControl_sp3.LabelName = "Sp3File:";
+            this.fileOpenControl_sp3.Location = new System.Drawing.Point(8, 6);
+            this.fileOpenControl_sp3.Name = "fileOpenControl_sp3";
+            this.fileOpenControl_sp3.Size = new System.Drawing.Size(629, 22);
+            this.fileOpenControl_sp3.TabIndex = 32;
+            // 
+            // richTextBoxControl_info
+            // 
+            this.richTextBoxControl_info.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.richTextBoxControl_info.Location = new System.Drawing.Point(3, 3);
+            this.richTextBoxControl_info.MaxAppendLineCount = 5000;
+            this.richTextBoxControl_info.Name = "richTextBoxControl_info";
+            this.richTextBoxControl_info.Size = new System.Drawing.Size(571, 307);
+            this.richTextBoxControl_info.TabIndex = 0;
+            this.richTextBoxControl_info.Text = "";
+            // 
+            // contextMenuStrip_Sattype
+            // 
+            this.contextMenuStrip_Sattype.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.removeThisToolStripMenuItem});
+            this.contextMenuStrip_Sattype.Name = "contextMenuStrip_Sattype";
+            this.contextMenuStrip_Sattype.Size = new System.Drawing.Size(181, 48);
+            // 
+            // removeThisToolStripMenuItem
+            // 
+            this.removeThisToolStripMenuItem.Name = "removeThisToolStripMenuItem";
+            this.removeThisToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.removeThisToolStripMenuItem.Text = "Remove this";
+            this.removeThisToolStripMenuItem.Click += new System.EventHandler(this.removeThisToolStripMenuItem_Click);
             // 
             // ObsFileViewerForm
             // 
@@ -540,6 +557,7 @@
             this.tabPage2.ResumeLayout(false);
             this.contextMenuStrip_prn.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            this.contextMenuStrip_Sattype.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -585,5 +603,7 @@
         private Controls.NamedFloatControl namedFloatControl_k1;
         private System.Windows.Forms.Button button_rangeError;
         private System.Windows.Forms.Button button_mp1Table;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip_Sattype;
+        private System.Windows.Forms.ToolStripMenuItem removeThisToolStripMenuItem;
     }
 }

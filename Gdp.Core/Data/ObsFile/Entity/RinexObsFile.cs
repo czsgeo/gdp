@@ -350,12 +350,37 @@ namespace Gdp.Data.Rinex
         /// <param name="prns"></param>
         /// <param name="epochs"></param>
         public void Remove(List<SatelliteNumber> prns, TimePeriod epochs)
-        {
+        { 
             foreach (var prn in prns)
             {
                 Remove(prn, epochs);
             }
-
+        }
+        public void Remove(List<SatelliteType> prns, TimePeriod epochs = null)
+        {
+            if(epochs == null)
+            {
+                epochs = this.Header.TimePeriod;
+            }
+            foreach (var prn in prns)
+            {
+                Remove(prn, epochs);
+            }
+        }
+        /// <summary>
+        /// 移除
+        /// </summary>
+        /// <param name="prn"></param>
+        /// <param name="epochs"></param>
+        public void Remove(SatelliteType prn, TimePeriod epochs)
+        {
+            foreach (var item in this._data)
+            {
+                if (!epochs.Contains(item.ReceiverTime)) { continue; }
+                 
+                  item.Remove(prn); 
+            }
+            IsChanged = true;
         }
         /// <summary>
         /// 移除

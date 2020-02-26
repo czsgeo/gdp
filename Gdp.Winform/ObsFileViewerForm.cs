@@ -154,6 +154,7 @@ namespace Gdp.Winform
             {
                 var satTypeNode = treeView1.Nodes.Add(kv.Key.ToString());
                 satTypeNode.Tag = kv.Key;
+                satTypeNode.ContextMenuStrip = this.contextMenuStrip_Sattype;// removeThisToolStripMenuItem;
 
                 foreach (var prn in kv.Value)
                 {
@@ -230,7 +231,7 @@ namespace Gdp.Winform
                 }
             }
             return SatelliteNumber.Default;
-        }
+        } 
 
         private void OpeninTableOToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -258,9 +259,12 @@ namespace Gdp.Winform
             var node = this.treeView1.SelectedNode;// (TreeNode)sender;
             if (node == null) { return; }
             var prn = GetSelectedPrn(node);
-            ObsFile.Remove(prn);
 
-            this.EntityToUi();
+            if (Gdp.Utils.FormUtil.ShowYesNoMessageBox(prn + " will be removed!") ==  DialogResult.Yes)
+            { 
+                ObsFile.Remove(prn); 
+                this.EntityToUi();
+            } 
         }
 
         private void DeleteSatellitesWithoutFullEpochesAToolStripMenuItem_Click(object sender, EventArgs e)
@@ -409,6 +413,19 @@ namespace Gdp.Winform
             var table = ObsFileAnalyzer.GetMp1Table(this.ObsFile, FileEphemerisService);
             new TableObjectViewForm(table).Show();
 
+        }
+
+        private void removeThisToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var node = this.treeView1.SelectedNode;// (TreeNode)sender;
+            if (node == null) { return; }
+            var prn = GetSelectedPrn(node);
+
+            if (Gdp.Utils.FormUtil.ShowYesNoMessageBox(prn.SatelliteType + " will be removed!") == DialogResult.Yes)
+            {
+                ObsFile.Remove(new List<SatelliteType>() { prn.SatelliteType });
+                this.EntityToUi();
+            }
         }
     }
 }
