@@ -302,7 +302,7 @@ namespace Gdp.Data.Rinex
                             break;
                         case Sp3HeaderLineMarker.SatelliteCount:
                             sartLineIndexOfSat = lineIndex;
-                            header.NumberOfSatellites = int.Parse(line.Substring(4, 2));
+                            header.NumberOfSatellites = int.Parse(line.Substring(3, 3));
 
                             int len = header.NumberOfSatellites >= 17 ? 17 : header.NumberOfSatellites;
 
