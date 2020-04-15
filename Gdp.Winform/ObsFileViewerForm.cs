@@ -427,5 +427,27 @@ namespace Gdp.Winform
                 this.EntityToUi();
             }
         }
+
+        private void button_mp2Table_Click(object sender, EventArgs e)
+        {
+            if (this.ObsFile == null)//|| this.FileEphemerisService == null //eph is not necesury
+            {
+                Gdp.Utils.FormUtil.ShowWarningMessageBox("Please read obs file first.");
+                return;
+            }
+            var table = ObsFileAnalyzer.GetMp2Table(this.ObsFile, FileEphemerisService);
+            new TableObjectViewForm(table).Show();
+        }
+
+        private void button_mp3Table_Click(object sender, EventArgs e)
+        {
+            if (this.ObsFile == null)//|| this.FileEphemerisService == null //eph is not necesury
+            {
+                Gdp.Utils.FormUtil.ShowWarningMessageBox("Please read obs file first.");
+                return;
+            }
+            var table = ObsFileAnalyzer.GetMp3Table(this.ObsFile, FileEphemerisService);
+            new TableObjectViewForm(table).Show();
+        }
     }
 }
