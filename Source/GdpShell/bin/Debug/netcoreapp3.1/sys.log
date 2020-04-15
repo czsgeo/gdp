@@ -1,0 +1,3 @@
+2020-02-04 00:34:51.909	Info	Could not find a part of the path 'D:\Codes\Csharp\Gdp\GdpShell\bin\Debug\netcoreapp3.1\Data\Sample'.	LocalGnssExecutor
+2020-02-04 00:36:23.886	Info	TimeSpan:00:00:07.8028817	LocalGnssExecutor
+2020-02-04 00:37:06.932	Info	TimeSpan:00:00:17.5941178	LocalGnssExecutor

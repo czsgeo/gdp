@@ -1,0 +1,249 @@
+D:\Codes\Csharp\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.csprojAssemblyReference.cache
+D:\Codes\Csharp\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.Properties.Resources.resources
+D:\Codes\Csharp\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.csproj.GenerateResource.cache
+D:\Codes\Csharp\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.csproj.CoreCompileInputs.cache
+D:\Codes\Csharp\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.csproj.CopyComplete
+D:\Codes\Csharp\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.MainForm.resources
+D:\Codes\Csharp\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.ObsFileConvertForm.resources
+D:\Codes\Csharp\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.ObsFileConvertOptionForm.resources
+D:\Codes\Csharp\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.EnabledFloatControl.resources
+D:\Codes\Csharp\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.EnabledIntControl.resources
+D:\Codes\Csharp\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.EnabledStringControl.resources
+D:\Codes\Csharp\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.EnumCheckBoxControl.resources
+D:\Codes\Csharp\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.EnumRadioControl.resources
+D:\Codes\Csharp\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.NamedFloatControl.resources
+D:\Codes\Csharp\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.NamedIntControl.resources
+D:\Codes\Csharp\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.NamedStringControl.resources
+D:\Codes\Csharp\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.TimePeriodControl.resources
+D:\Codes\Csharp\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.FileOpenControl.resources
+D:\Codes\Csharp\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.MultiGnssSystemSelectControl.resources
+D:\Codes\Csharp\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.ObjectTableControl.resources
+D:\Codes\Csharp\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.TableObjectViewForm.resources
+D:\Codes\Csharp\GnssDataRepressor\GDP\Gdp.Winform\bin\Debug\Gdp.pdb
+D:\Codes\Csharp\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.DirectorySelectionControl.resources
+D:\Codes\Csharp\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.ObsFileSelectorForm.resources
+D:\Codes\Csharp\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.ObsFileSelectOptionForm.resources
+D:\Codes\Csharp\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.IgsProductDownloadForm.resources
+D:\Codes\Csharp\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.ProgressBarComponent.resources
+D:\Codes\Csharp\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.RichTextBoxControl.resources
+D:\Codes\Csharp\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.ObsFileViewerForm.resources
+D:\Codes\Csharp\GnssDataRepressor2019.08.22.12【四大功能基本实现】\GnssDataRepressor\GDP\Gdp.Winform\bin\Debug\Gdp.pdb
+D:\Codes\Csharp\GnssDataRepressor2019.08.22.12【四大功能基本实现】\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.csprojAssemblyReference.cache
+D:\Codes\Csharp\GnssDataRepressor2019.08.22.12【四大功能基本实现】\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.DirectorySelectionControl.resources
+D:\Codes\Csharp\GnssDataRepressor2019.08.22.12【四大功能基本实现】\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.EnabledFloatControl.resources
+D:\Codes\Csharp\GnssDataRepressor2019.08.22.12【四大功能基本实现】\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.EnabledIntControl.resources
+D:\Codes\Csharp\GnssDataRepressor2019.08.22.12【四大功能基本实现】\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.EnabledStringControl.resources
+D:\Codes\Csharp\GnssDataRepressor2019.08.22.12【四大功能基本实现】\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.EnumCheckBoxControl.resources
+D:\Codes\Csharp\GnssDataRepressor2019.08.22.12【四大功能基本实现】\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.EnumRadioControl.resources
+D:\Codes\Csharp\GnssDataRepressor2019.08.22.12【四大功能基本实现】\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.FileOpenControl.resources
+D:\Codes\Csharp\GnssDataRepressor2019.08.22.12【四大功能基本实现】\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.ProgressBarComponent.resources
+D:\Codes\Csharp\GnssDataRepressor2019.08.22.12【四大功能基本实现】\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.RichTextBoxControl.resources
+D:\Codes\Csharp\GnssDataRepressor2019.08.22.12【四大功能基本实现】\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.IgsProductDownloadForm.resources
+D:\Codes\Csharp\GnssDataRepressor2019.08.22.12【四大功能基本实现】\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.MainForm.resources
+D:\Codes\Csharp\GnssDataRepressor2019.08.22.12【四大功能基本实现】\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.MultiGnssSystemSelectControl.resources
+D:\Codes\Csharp\GnssDataRepressor2019.08.22.12【四大功能基本实现】\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.NamedFloatControl.resources
+D:\Codes\Csharp\GnssDataRepressor2019.08.22.12【四大功能基本实现】\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.NamedIntControl.resources
+D:\Codes\Csharp\GnssDataRepressor2019.08.22.12【四大功能基本实现】\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.NamedStringControl.resources
+D:\Codes\Csharp\GnssDataRepressor2019.08.22.12【四大功能基本实现】\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.ObjectTableControl.resources
+D:\Codes\Csharp\GnssDataRepressor2019.08.22.12【四大功能基本实现】\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.ObsFileSelectorForm.resources
+D:\Codes\Csharp\GnssDataRepressor2019.08.22.12【四大功能基本实现】\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.ObsFileSelectOptionForm.resources
+D:\Codes\Csharp\GnssDataRepressor2019.08.22.12【四大功能基本实现】\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.ObsFileConvertForm.resources
+D:\Codes\Csharp\GnssDataRepressor2019.08.22.12【四大功能基本实现】\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.ObsFileConvertOptionForm.resources
+D:\Codes\Csharp\GnssDataRepressor2019.08.22.12【四大功能基本实现】\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.ObsFileViewerForm.resources
+D:\Codes\Csharp\GnssDataRepressor2019.08.22.12【四大功能基本实现】\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.Properties.Resources.resources
+D:\Codes\Csharp\GnssDataRepressor2019.08.22.12【四大功能基本实现】\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.TableObjectViewForm.resources
+D:\Codes\Csharp\GnssDataRepressor2019.08.22.12【四大功能基本实现】\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.TimePeriodControl.resources
+D:\Codes\Csharp\GnssDataRepressor2019.08.22.12【四大功能基本实现】\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.csproj.GenerateResource.cache
+D:\Codes\Csharp\GnssDataRepressor2019.08.22.12【四大功能基本实现】\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.csproj.CoreCompileInputs.cache
+D:\Codes\Csharp\GnssDataRepressor2019.08.22.12【四大功能基本实现】\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.Winform.csproj.CopyComplete
+D:\Codes\Csharp\GnssDataRepressor2019.08.22.12【四大功能基本实现】\GnssDataRepressor\GDP\Gdp.Winform\bin\Debug\Gdp.exe.config
+D:\Codes\Csharp\GnssDataRepressor2019.08.22.12【四大功能基本实现】\GnssDataRepressor\GDP\Gdp.Winform\bin\Debug\Gdp.exe
+D:\Codes\Csharp\GnssDataRepressor2019.08.22.12【四大功能基本实现】\GnssDataRepressor\GDP\Gdp.Winform\bin\Debug\Gdp.Core.dll
+D:\Codes\Csharp\GnssDataRepressor2019.08.22.12【四大功能基本实现】\GnssDataRepressor\GDP\Gdp.Winform\bin\Debug\Gdp.Core.pdb
+D:\Codes\Csharp\GnssDataRepressor2019.08.22.12【四大功能基本实现】\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.exe
+D:\Codes\Csharp\GnssDataRepressor2019.08.22.12【四大功能基本实现】\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.pdb
+D:\Codes\Csharp\GnssDataRepressor\GDP\Gdp.Winform\bin\Debug\Gdp.exe.config
+D:\Codes\Csharp\GnssDataRepressor\GDP\Gdp.Winform\bin\Debug\Gdp.exe
+D:\Codes\Csharp\GnssDataRepressor\GDP\Gdp.Winform\bin\Debug\Gdp.Core.dll
+D:\Codes\Csharp\GnssDataRepressor\GDP\Gdp.Winform\bin\Debug\Gdp.Core.pdb
+D:\Codes\Csharp\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.exe
+D:\Codes\Csharp\GnssDataRepressor\GDP\Gdp.Winform\obj\Debug\Gdp.pdb
+C:\Users\admin\Documents\WeChat Files\lilinyang910810\FileStorage\File\2019-08\Gdp\Gdp.Winform\bin\Debug\Gdp.exe.config
+C:\Users\admin\Documents\WeChat Files\lilinyang910810\FileStorage\File\2019-08\Gdp\Gdp.Winform\bin\Debug\Gdp.exe
+C:\Users\admin\Documents\WeChat Files\lilinyang910810\FileStorage\File\2019-08\Gdp\Gdp.Winform\bin\Debug\Gdp.pdb
+C:\Users\admin\Documents\WeChat Files\lilinyang910810\FileStorage\File\2019-08\Gdp\Gdp.Winform\bin\Debug\Gdp.Core.dll
+C:\Users\admin\Documents\WeChat Files\lilinyang910810\FileStorage\File\2019-08\Gdp\Gdp.Winform\bin\Debug\Gdp.Core.pdb
+C:\Users\admin\Documents\WeChat Files\lilinyang910810\FileStorage\File\2019-08\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.csprojAssemblyReference.cache
+C:\Users\admin\Documents\WeChat Files\lilinyang910810\FileStorage\File\2019-08\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.DirectorySelectionControl.resources
+C:\Users\admin\Documents\WeChat Files\lilinyang910810\FileStorage\File\2019-08\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.EnabledFloatControl.resources
+C:\Users\admin\Documents\WeChat Files\lilinyang910810\FileStorage\File\2019-08\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.EnabledIntControl.resources
+C:\Users\admin\Documents\WeChat Files\lilinyang910810\FileStorage\File\2019-08\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.EnabledStringControl.resources
+C:\Users\admin\Documents\WeChat Files\lilinyang910810\FileStorage\File\2019-08\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.EnumCheckBoxControl.resources
+C:\Users\admin\Documents\WeChat Files\lilinyang910810\FileStorage\File\2019-08\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.EnumRadioControl.resources
+C:\Users\admin\Documents\WeChat Files\lilinyang910810\FileStorage\File\2019-08\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.FileOpenControl.resources
+C:\Users\admin\Documents\WeChat Files\lilinyang910810\FileStorage\File\2019-08\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.ProgressBarComponent.resources
+C:\Users\admin\Documents\WeChat Files\lilinyang910810\FileStorage\File\2019-08\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.RichTextBoxControl.resources
+C:\Users\admin\Documents\WeChat Files\lilinyang910810\FileStorage\File\2019-08\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.IgsProductDownloadForm.resources
+C:\Users\admin\Documents\WeChat Files\lilinyang910810\FileStorage\File\2019-08\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.MainForm.resources
+C:\Users\admin\Documents\WeChat Files\lilinyang910810\FileStorage\File\2019-08\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.MultiGnssSystemSelectControl.resources
+C:\Users\admin\Documents\WeChat Files\lilinyang910810\FileStorage\File\2019-08\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.NamedFloatControl.resources
+C:\Users\admin\Documents\WeChat Files\lilinyang910810\FileStorage\File\2019-08\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.NamedIntControl.resources
+C:\Users\admin\Documents\WeChat Files\lilinyang910810\FileStorage\File\2019-08\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.NamedStringControl.resources
+C:\Users\admin\Documents\WeChat Files\lilinyang910810\FileStorage\File\2019-08\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.ObjectTableControl.resources
+C:\Users\admin\Documents\WeChat Files\lilinyang910810\FileStorage\File\2019-08\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.ObsFileSelectorForm.resources
+C:\Users\admin\Documents\WeChat Files\lilinyang910810\FileStorage\File\2019-08\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.ObsFileSelectOptionForm.resources
+C:\Users\admin\Documents\WeChat Files\lilinyang910810\FileStorage\File\2019-08\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.ObsFileConvertForm.resources
+C:\Users\admin\Documents\WeChat Files\lilinyang910810\FileStorage\File\2019-08\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.ObsFileConvertOptionForm.resources
+C:\Users\admin\Documents\WeChat Files\lilinyang910810\FileStorage\File\2019-08\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.ObsFileViewerForm.resources
+C:\Users\admin\Documents\WeChat Files\lilinyang910810\FileStorage\File\2019-08\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.Properties.Resources.resources
+C:\Users\admin\Documents\WeChat Files\lilinyang910810\FileStorage\File\2019-08\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.TableObjectViewForm.resources
+C:\Users\admin\Documents\WeChat Files\lilinyang910810\FileStorage\File\2019-08\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.TimePeriodControl.resources
+C:\Users\admin\Documents\WeChat Files\lilinyang910810\FileStorage\File\2019-08\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.csproj.GenerateResource.cache
+C:\Users\admin\Documents\WeChat Files\lilinyang910810\FileStorage\File\2019-08\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.csproj.CoreCompileInputs.cache
+C:\Users\admin\Documents\WeChat Files\lilinyang910810\FileStorage\File\2019-08\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.csproj.CopyComplete
+C:\Users\admin\Documents\WeChat Files\lilinyang910810\FileStorage\File\2019-08\Gdp\Gdp.Winform\obj\Debug\Gdp.exe
+C:\Users\admin\Documents\WeChat Files\lilinyang910810\FileStorage\File\2019-08\Gdp\Gdp.Winform\obj\Debug\Gdp.pdb
+H:\Gdp\Gdp.Winform\bin\Debug\Gdp.exe.config
+H:\Gdp\Gdp.Winform\bin\Debug\Gdp.exe
+H:\Gdp\Gdp.Winform\bin\Debug\Gdp.pdb
+H:\Gdp\Gdp.Winform\bin\Debug\Gdp.Core.dll
+H:\Gdp\Gdp.Winform\bin\Debug\Gdp.Core.pdb
+H:\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.csprojAssemblyReference.cache
+H:\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.DirectorySelectionControl.resources
+H:\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.EnabledFloatControl.resources
+H:\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.EnabledIntControl.resources
+H:\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.EnabledStringControl.resources
+H:\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.EnumCheckBoxControl.resources
+H:\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.EnumRadioControl.resources
+H:\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.FileOpenControl.resources
+H:\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.ProgressBarComponent.resources
+H:\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.RichTextBoxControl.resources
+H:\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.IgsProductDownloadForm.resources
+H:\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.MainForm.resources
+H:\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.MultiGnssSystemSelectControl.resources
+H:\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.NamedFloatControl.resources
+H:\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.NamedIntControl.resources
+H:\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.NamedStringControl.resources
+H:\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.ObjectTableControl.resources
+H:\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.ObsFileSelectorForm.resources
+H:\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.ObsFileSelectOptionForm.resources
+H:\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.ObsFileConvertForm.resources
+H:\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.ObsFileConvertOptionForm.resources
+H:\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.ObsFileViewerForm.resources
+H:\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.Properties.Resources.resources
+H:\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.TableObjectViewForm.resources
+H:\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.TimePeriodControl.resources
+H:\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.csproj.GenerateResource.cache
+H:\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.csproj.CoreCompileInputs.cache
+H:\Gdp\Gdp.Winform\obj\Debug\Gdp.Winform.csproj.CopyComplete
+H:\Gdp\Gdp.Winform\obj\Debug\Gdp.exe
+H:\Gdp\Gdp.Winform\obj\Debug\Gdp.pdb
+C:\Users\Cui\Desktop\GDP\Gdp.2020.02.14.12[多系统修复部分]\Gdp.Winform\bin\Debug\GdpWinUI.exe.config
+C:\Users\Cui\Desktop\GDP\Gdp.2020.02.14.12[多系统修复部分]\Gdp.Winform\bin\Debug\GdpWinUI.exe
+C:\Users\Cui\Desktop\GDP\Gdp.2020.02.14.12[多系统修复部分]\Gdp.Winform\bin\Debug\GdpWinUI.pdb
+C:\Users\Cui\Desktop\GDP\Gdp.2020.02.14.12[多系统修复部分]\Gdp.Winform\bin\Debug\Gdp.Core.dll
+C:\Users\Cui\Desktop\GDP\Gdp.2020.02.14.12[多系统修复部分]\Gdp.Winform\bin\Debug\Gdp.Core.pdb
+C:\Users\Cui\Desktop\GDP\Gdp.2020.02.14.12[多系统修复部分]\Gdp.Winform\obj\Debug\Gdp.Winform.csprojAssemblyReference.cache
+C:\Users\Cui\Desktop\GDP\Gdp.2020.02.14.12[多系统修复部分]\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.DirectorySelectionControl.resources
+C:\Users\Cui\Desktop\GDP\Gdp.2020.02.14.12[多系统修复部分]\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.EnabledFloatControl.resources
+C:\Users\Cui\Desktop\GDP\Gdp.2020.02.14.12[多系统修复部分]\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.EnabledIntControl.resources
+C:\Users\Cui\Desktop\GDP\Gdp.2020.02.14.12[多系统修复部分]\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.EnabledStringControl.resources
+C:\Users\Cui\Desktop\GDP\Gdp.2020.02.14.12[多系统修复部分]\Gdp.Winform\obj\Debug\Gdp.Winform.EnumCheckBoxControl.resources
+C:\Users\Cui\Desktop\GDP\Gdp.2020.02.14.12[多系统修复部分]\Gdp.Winform\obj\Debug\Gdp.Winform.EnumRadioControl.resources
+C:\Users\Cui\Desktop\GDP\Gdp.2020.02.14.12[多系统修复部分]\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.FileOpenControl.resources
+C:\Users\Cui\Desktop\GDP\Gdp.2020.02.14.12[多系统修复部分]\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.ProgressBarComponent.resources
+C:\Users\Cui\Desktop\GDP\Gdp.2020.02.14.12[多系统修复部分]\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.RichTextBoxControl.resources
+C:\Users\Cui\Desktop\GDP\Gdp.2020.02.14.12[多系统修复部分]\Gdp.Winform\obj\Debug\Gdp.Winform.IgsProductDownloadForm.resources
+C:\Users\Cui\Desktop\GDP\Gdp.2020.02.14.12[多系统修复部分]\Gdp.Winform\obj\Debug\Gdp.Winform.MainForm.resources
+C:\Users\Cui\Desktop\GDP\Gdp.2020.02.14.12[多系统修复部分]\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.MultiGnssSystemSelectControl.resources
+C:\Users\Cui\Desktop\GDP\Gdp.2020.02.14.12[多系统修复部分]\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.NamedFloatControl.resources
+C:\Users\Cui\Desktop\GDP\Gdp.2020.02.14.12[多系统修复部分]\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.NamedIntControl.resources
+C:\Users\Cui\Desktop\GDP\Gdp.2020.02.14.12[多系统修复部分]\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.NamedStringControl.resources
+C:\Users\Cui\Desktop\GDP\Gdp.2020.02.14.12[多系统修复部分]\Gdp.Winform\obj\Debug\Gdp.Winform.ObjectTableControl.resources
+C:\Users\Cui\Desktop\GDP\Gdp.2020.02.14.12[多系统修复部分]\Gdp.Winform\obj\Debug\Gdp.Winform.ObsFileSelectorForm.resources
+C:\Users\Cui\Desktop\GDP\Gdp.2020.02.14.12[多系统修复部分]\Gdp.Winform\obj\Debug\Gdp.Winform.ObsFileSelectOptionForm.resources
+C:\Users\Cui\Desktop\GDP\Gdp.2020.02.14.12[多系统修复部分]\Gdp.Winform\obj\Debug\Gdp.Winform.ObsFileConvertForm.resources
+C:\Users\Cui\Desktop\GDP\Gdp.2020.02.14.12[多系统修复部分]\Gdp.Winform\obj\Debug\Gdp.Winform.ObsFileConvertOptionForm.resources
+C:\Users\Cui\Desktop\GDP\Gdp.2020.02.14.12[多系统修复部分]\Gdp.Winform\obj\Debug\Gdp.Winform.ObsFileViewerForm.resources
+C:\Users\Cui\Desktop\GDP\Gdp.2020.02.14.12[多系统修复部分]\Gdp.Winform\obj\Debug\Gdp.Winform.Properties.Resources.resources
+C:\Users\Cui\Desktop\GDP\Gdp.2020.02.14.12[多系统修复部分]\Gdp.Winform\obj\Debug\Gdp.Winform.TableObjectViewForm.resources
+C:\Users\Cui\Desktop\GDP\Gdp.2020.02.14.12[多系统修复部分]\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.TimePeriodControl.resources
+C:\Users\Cui\Desktop\GDP\Gdp.2020.02.14.12[多系统修复部分]\Gdp.Winform\obj\Debug\Gdp.Winform.csproj.GenerateResource.cache
+C:\Users\Cui\Desktop\GDP\Gdp.2020.02.14.12[多系统修复部分]\Gdp.Winform\obj\Debug\Gdp.Winform.csproj.CopyComplete
+C:\Users\Cui\Desktop\GDP\Gdp.2020.02.14.12[多系统修复部分]\Gdp.Winform\obj\Debug\GdpWinUI.exe
+C:\Users\Cui\Desktop\GDP\Gdp.2020.02.14.12[多系统修复部分]\Gdp.Winform\obj\Debug\GdpWinUI.pdb
+E:\[Work]\[思&写&投]\GDP\用户说明书\Gdp1.0\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\bin\Debug\GdpWinUI.exe.config
+E:\[Work]\[思&写&投]\GDP\用户说明书\Gdp1.0\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\bin\Debug\GdpWinUI.exe
+E:\[Work]\[思&写&投]\GDP\用户说明书\Gdp1.0\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\bin\Debug\GdpWinUI.pdb
+E:\[Work]\[思&写&投]\GDP\用户说明书\Gdp1.0\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\bin\Debug\Gdp.Standard.dll
+E:\[Work]\[思&写&投]\GDP\用户说明书\Gdp1.0\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\bin\Debug\Gdp.Standard.pdb
+E:\[Work]\[思&写&投]\GDP\用户说明书\Gdp1.0\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.csprojAssemblyReference.cache
+E:\[Work]\[思&写&投]\GDP\用户说明书\Gdp1.0\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.ChartForm.resources
+E:\[Work]\[思&写&投]\GDP\用户说明书\Gdp1.0\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.DirectorySelectionControl.resources
+E:\[Work]\[思&写&投]\GDP\用户说明书\Gdp1.0\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.EnabledFloatControl.resources
+E:\[Work]\[思&写&投]\GDP\用户说明书\Gdp1.0\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.EnabledIntControl.resources
+E:\[Work]\[思&写&投]\GDP\用户说明书\Gdp1.0\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.EnabledStringControl.resources
+E:\[Work]\[思&写&投]\GDP\用户说明书\Gdp1.0\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.EnumCheckBoxControl.resources
+E:\[Work]\[思&写&投]\GDP\用户说明书\Gdp1.0\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.EnumRadioControl.resources
+E:\[Work]\[思&写&投]\GDP\用户说明书\Gdp1.0\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.FileOpenControl.resources
+E:\[Work]\[思&写&投]\GDP\用户说明书\Gdp1.0\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.ProgressBarComponent.resources
+E:\[Work]\[思&写&投]\GDP\用户说明书\Gdp1.0\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.RichTextBoxControl.resources
+E:\[Work]\[思&写&投]\GDP\用户说明书\Gdp1.0\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.IgsProductDownloadForm.resources
+E:\[Work]\[思&写&投]\GDP\用户说明书\Gdp1.0\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.MainForm.resources
+E:\[Work]\[思&写&投]\GDP\用户说明书\Gdp1.0\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.MultiGnssSystemSelectControl.resources
+E:\[Work]\[思&写&投]\GDP\用户说明书\Gdp1.0\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.NamedFloatControl.resources
+E:\[Work]\[思&写&投]\GDP\用户说明书\Gdp1.0\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.NamedIntControl.resources
+E:\[Work]\[思&写&投]\GDP\用户说明书\Gdp1.0\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.NamedStringControl.resources
+E:\[Work]\[思&写&投]\GDP\用户说明书\Gdp1.0\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.ObjectTableControl.resources
+E:\[Work]\[思&写&投]\GDP\用户说明书\Gdp1.0\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.FileInfoExtractForm.resources
+E:\[Work]\[思&写&投]\GDP\用户说明书\Gdp1.0\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.ObsFileSelectorForm.resources
+E:\[Work]\[思&写&投]\GDP\用户说明书\Gdp1.0\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.ObsFileSelectOptionForm.resources
+E:\[Work]\[思&写&投]\GDP\用户说明书\Gdp1.0\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.ObsFileConvertForm.resources
+E:\[Work]\[思&写&投]\GDP\用户说明书\Gdp1.0\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.ObsFileConvertOptionForm.resources
+E:\[Work]\[思&写&投]\GDP\用户说明书\Gdp1.0\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.ObsFileViewerForm.resources
+E:\[Work]\[思&写&投]\GDP\用户说明书\Gdp1.0\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.Properties.Resources.resources
+E:\[Work]\[思&写&投]\GDP\用户说明书\Gdp1.0\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.TableObjectViewForm.resources
+E:\[Work]\[思&写&投]\GDP\用户说明书\Gdp1.0\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.TimePeriodControl.resources
+E:\[Work]\[思&写&投]\GDP\用户说明书\Gdp1.0\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Utils.OneTextInputForm.resources
+E:\[Work]\[思&写&投]\GDP\用户说明书\Gdp1.0\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.csproj.GenerateResource.cache
+E:\[Work]\[思&写&投]\GDP\用户说明书\Gdp1.0\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.csproj.CopyComplete
+E:\[Work]\[思&写&投]\GDP\用户说明书\Gdp1.0\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\GdpWinUI.exe
+E:\[Work]\[思&写&投]\GDP\用户说明书\Gdp1.0\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\GdpWinUI.pdb
+E:\【Work】\【Paper】\【已投论文】\2019.11【GDP】\Gdp1.0-崔阳修改后\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\bin\Debug\GdpWinUI.exe.config
+E:\【Work】\【Paper】\【已投论文】\2019.11【GDP】\Gdp1.0-崔阳修改后\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\bin\Debug\GdpWinUI.exe
+E:\【Work】\【Paper】\【已投论文】\2019.11【GDP】\Gdp1.0-崔阳修改后\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\bin\Debug\GdpWinUI.pdb
+E:\【Work】\【Paper】\【已投论文】\2019.11【GDP】\Gdp1.0-崔阳修改后\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\bin\Debug\Gdp.Standard.dll
+E:\【Work】\【Paper】\【已投论文】\2019.11【GDP】\Gdp1.0-崔阳修改后\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\bin\Debug\Gdp.Standard.pdb
+E:\【Work】\【Paper】\【已投论文】\2019.11【GDP】\Gdp1.0-崔阳修改后\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.csprojAssemblyReference.cache
+E:\【Work】\【Paper】\【已投论文】\2019.11【GDP】\Gdp1.0-崔阳修改后\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.ChartForm.resources
+E:\【Work】\【Paper】\【已投论文】\2019.11【GDP】\Gdp1.0-崔阳修改后\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.DirectorySelectionControl.resources
+E:\【Work】\【Paper】\【已投论文】\2019.11【GDP】\Gdp1.0-崔阳修改后\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.EnabledFloatControl.resources
+E:\【Work】\【Paper】\【已投论文】\2019.11【GDP】\Gdp1.0-崔阳修改后\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.EnabledIntControl.resources
+E:\【Work】\【Paper】\【已投论文】\2019.11【GDP】\Gdp1.0-崔阳修改后\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.EnabledStringControl.resources
+E:\【Work】\【Paper】\【已投论文】\2019.11【GDP】\Gdp1.0-崔阳修改后\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.EnumCheckBoxControl.resources
+E:\【Work】\【Paper】\【已投论文】\2019.11【GDP】\Gdp1.0-崔阳修改后\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.EnumRadioControl.resources
+E:\【Work】\【Paper】\【已投论文】\2019.11【GDP】\Gdp1.0-崔阳修改后\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.FileOpenControl.resources
+E:\【Work】\【Paper】\【已投论文】\2019.11【GDP】\Gdp1.0-崔阳修改后\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.ProgressBarComponent.resources
+E:\【Work】\【Paper】\【已投论文】\2019.11【GDP】\Gdp1.0-崔阳修改后\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.RichTextBoxControl.resources
+E:\【Work】\【Paper】\【已投论文】\2019.11【GDP】\Gdp1.0-崔阳修改后\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.IgsProductDownloadForm.resources
+E:\【Work】\【Paper】\【已投论文】\2019.11【GDP】\Gdp1.0-崔阳修改后\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.MainForm.resources
+E:\【Work】\【Paper】\【已投论文】\2019.11【GDP】\Gdp1.0-崔阳修改后\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.MultiGnssSystemSelectControl.resources
+E:\【Work】\【Paper】\【已投论文】\2019.11【GDP】\Gdp1.0-崔阳修改后\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.NamedFloatControl.resources
+E:\【Work】\【Paper】\【已投论文】\2019.11【GDP】\Gdp1.0-崔阳修改后\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.NamedIntControl.resources
+E:\【Work】\【Paper】\【已投论文】\2019.11【GDP】\Gdp1.0-崔阳修改后\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.NamedStringControl.resources
+E:\【Work】\【Paper】\【已投论文】\2019.11【GDP】\Gdp1.0-崔阳修改后\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.ObjectTableControl.resources
+E:\【Work】\【Paper】\【已投论文】\2019.11【GDP】\Gdp1.0-崔阳修改后\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.FileInfoExtractForm.resources
+E:\【Work】\【Paper】\【已投论文】\2019.11【GDP】\Gdp1.0-崔阳修改后\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.ObsFileSelectorForm.resources
+E:\【Work】\【Paper】\【已投论文】\2019.11【GDP】\Gdp1.0-崔阳修改后\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.ObsFileSelectOptionForm.resources
+E:\【Work】\【Paper】\【已投论文】\2019.11【GDP】\Gdp1.0-崔阳修改后\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.ObsFileConvertForm.resources
+E:\【Work】\【Paper】\【已投论文】\2019.11【GDP】\Gdp1.0-崔阳修改后\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.ObsFileConvertOptionForm.resources
+E:\【Work】\【Paper】\【已投论文】\2019.11【GDP】\Gdp1.0-崔阳修改后\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.ObsFileViewerForm.resources
+E:\【Work】\【Paper】\【已投论文】\2019.11【GDP】\Gdp1.0-崔阳修改后\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.Properties.Resources.resources
+E:\【Work】\【Paper】\【已投论文】\2019.11【GDP】\Gdp1.0-崔阳修改后\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.TableObjectViewForm.resources
+E:\【Work】\【Paper】\【已投论文】\2019.11【GDP】\Gdp1.0-崔阳修改后\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.Controls.TimePeriodControl.resources
+E:\【Work】\【Paper】\【已投论文】\2019.11【GDP】\Gdp1.0-崔阳修改后\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Utils.OneTextInputForm.resources
+E:\【Work】\【Paper】\【已投论文】\2019.11【GDP】\Gdp1.0-崔阳修改后\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.csproj.GenerateResource.cache
+E:\【Work】\【Paper】\【已投论文】\2019.11【GDP】\Gdp1.0-崔阳修改后\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.csproj.CoreCompileInputs.cache
+E:\【Work】\【Paper】\【已投论文】\2019.11【GDP】\Gdp1.0-崔阳修改后\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\Gdp.Winform.csproj.CopyComplete
+E:\【Work】\【Paper】\【已投论文】\2019.11【GDP】\Gdp1.0-崔阳修改后\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\GdpWinUI.exe
+E:\【Work】\【Paper】\【已投论文】\2019.11【GDP】\Gdp1.0-崔阳修改后\Gdp1.0\Gdp_v1.0_src\Gdp_v1.0_src\Gdp.Winform\obj\Debug\GdpWinUI.pdb

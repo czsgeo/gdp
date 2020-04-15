@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "J6731ZiJlQIQhe4paWrZ4IXIKneBDmDkd4O0CHXQXek++lCn6qCyVZ9lxFcXwZr00ITbvsEL3Qit/FOuqpU/1Q==",
+  "success": true,
+  "projectFilePath": "D:\\Codes\\Csharp\\Gdp\\Source\\Gdp.Core\\Gdp.Standard.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\czs\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\czs\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

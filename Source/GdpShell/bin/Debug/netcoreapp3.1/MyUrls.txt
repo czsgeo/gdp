@@ -1,0 +1,5 @@
+ftp://igs.ensg.eu/pub/igs/products/2086/igs20863.sp3.Z
+ftp://igs.ensg.eu/pub/igs/products/2086/igs20864.sp3.Z
+ftp://igs.ensg.eu/pub/igs/products/2086/igs20865.sp3.Z
+ftp://igs.ensg.eu/pub/igs/products/2086/igs20866.sp3.Z
+ftp://igs.ensg.eu/pub/igs/products/2087/igs20870.sp3.Z

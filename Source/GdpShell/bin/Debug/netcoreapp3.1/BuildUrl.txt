@@ -1,0 +1,3 @@
+ftp://igs.ensg.eu/pub/igs/products/2086/igs20P00.sp3.Z
+ftp://igs.ensg.eu/pub/igs/products/2087/igs20P00.sp3.Z
+ftp://igs.ensg.eu/pub/igs/products/2087/igs20P01.sp3.Z

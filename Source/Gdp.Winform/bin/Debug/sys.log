@@ -1,0 +1,6 @@
+2020-04-15 10:15:45.541	Info	Obs File，载入了： Data\hers0010.18O	FileOpenControl
+2020-04-15 10:16:07.083	Info	Sp3File，载入了： D:\Codes\Csharp\Gdp\Gdp.Winform\bin\Debug\Data\igs19821.sp3	FileOpenControl
+2020-04-15 10:16:08.203	Warn	igs19821.sp3星历略过 EOF	AbstractTimedStreamReader`1
+2020-04-15 10:16:08.204	Info	完全加载了星历文件到内存 igs19821.sp3	AbstractTimedStreamReader`1
+2020-04-15 10:33:48.346	Info	Obs File，载入了： Data\hers0010.18O	FileOpenControl
+2020-04-15 10:36:42.716	Info	Obs File，载入了： Data\hers0010.18O	FileOpenControl

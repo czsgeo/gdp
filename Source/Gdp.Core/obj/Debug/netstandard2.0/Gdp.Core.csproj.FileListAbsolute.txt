@@ -1,0 +1,52 @@
+D:\Codes\Csharp\GnssDataRepressor\GDP\Gdp.Core\obj\Debug\netstandard2.0\Gdp.Core.csprojAssemblyReference.cache
+D:\Codes\Csharp\GnssDataRepressor\GDP\Gdp.Core\obj\Debug\netstandard2.0\Gdp.Core.csproj.CoreCompileInputs.cache
+D:\Codes\Csharp\GnssDataRepressor\GDP\Gdp.Core\obj\Debug\netstandard2.0\Gdp.Core.AssemblyInfoInputs.cache
+D:\Codes\Csharp\GnssDataRepressor\GDP\Gdp.Core\obj\Debug\netstandard2.0\Gdp.Core.AssemblyInfo.cs
+D:\Codes\Csharp\GnssDataRepressor2019.08.22.12【四大功能基本实现】\GnssDataRepressor\GDP\Gdp.Core\obj\Debug\netstandard2.0\Gdp.Core.csprojAssemblyReference.cache
+D:\Codes\Csharp\GnssDataRepressor2019.08.22.12【四大功能基本实现】\GnssDataRepressor\GDP\Gdp.Core\obj\Debug\netstandard2.0\Gdp.Core.csproj.CoreCompileInputs.cache
+D:\Codes\Csharp\GnssDataRepressor2019.08.22.12【四大功能基本实现】\GnssDataRepressor\GDP\Gdp.Core\obj\Debug\netstandard2.0\Gdp.Core.AssemblyInfoInputs.cache
+D:\Codes\Csharp\GnssDataRepressor2019.08.22.12【四大功能基本实现】\GnssDataRepressor\GDP\Gdp.Core\obj\Debug\netstandard2.0\Gdp.Core.AssemblyInfo.cs
+D:\Codes\Csharp\GnssDataRepressor2019.08.22.12【四大功能基本实现】\GnssDataRepressor\GDP\Gdp.Core\bin\Debug\netstandard2.0\Gdp.Core.deps.json
+D:\Codes\Csharp\GnssDataRepressor2019.08.22.12【四大功能基本实现】\GnssDataRepressor\GDP\Gdp.Core\bin\Debug\netstandard2.0\Gdp.Core.dll
+D:\Codes\Csharp\GnssDataRepressor2019.08.22.12【四大功能基本实现】\GnssDataRepressor\GDP\Gdp.Core\bin\Debug\netstandard2.0\Gdp.Core.pdb
+D:\Codes\Csharp\GnssDataRepressor2019.08.22.12【四大功能基本实现】\GnssDataRepressor\GDP\Gdp.Core\obj\Debug\netstandard2.0\Gdp.Core.dll
+D:\Codes\Csharp\GnssDataRepressor2019.08.22.12【四大功能基本实现】\GnssDataRepressor\GDP\Gdp.Core\obj\Debug\netstandard2.0\Gdp.Core.pdb
+D:\Codes\Csharp\GnssDataRepressor\GDP\Gdp.Core\bin\Debug\netstandard2.0\Gdp.Core.deps.json
+D:\Codes\Csharp\GnssDataRepressor\GDP\Gdp.Core\bin\Debug\netstandard2.0\Gdp.Core.dll
+D:\Codes\Csharp\GnssDataRepressor\GDP\Gdp.Core\bin\Debug\netstandard2.0\Gdp.Core.pdb
+D:\Codes\Csharp\GnssDataRepressor\GDP\Gdp.Core\obj\Debug\netstandard2.0\Gdp.Core.dll
+D:\Codes\Csharp\GnssDataRepressor\GDP\Gdp.Core\obj\Debug\netstandard2.0\Gdp.Core.pdb
+C:\Users\admin\Documents\WeChat Files\lilinyang910810\FileStorage\File\2019-08\Gdp\Gdp.Core\bin\Debug\netstandard2.0\Gdp.Core.deps.json
+C:\Users\admin\Documents\WeChat Files\lilinyang910810\FileStorage\File\2019-08\Gdp\Gdp.Core\bin\Debug\netstandard2.0\Gdp.Core.dll
+C:\Users\admin\Documents\WeChat Files\lilinyang910810\FileStorage\File\2019-08\Gdp\Gdp.Core\bin\Debug\netstandard2.0\Gdp.Core.pdb
+C:\Users\admin\Documents\WeChat Files\lilinyang910810\FileStorage\File\2019-08\Gdp\Gdp.Core\obj\Debug\netstandard2.0\Gdp.Core.csprojAssemblyReference.cache
+C:\Users\admin\Documents\WeChat Files\lilinyang910810\FileStorage\File\2019-08\Gdp\Gdp.Core\obj\Debug\netstandard2.0\Gdp.Core.csproj.CoreCompileInputs.cache
+C:\Users\admin\Documents\WeChat Files\lilinyang910810\FileStorage\File\2019-08\Gdp\Gdp.Core\obj\Debug\netstandard2.0\Gdp.Core.AssemblyInfoInputs.cache
+C:\Users\admin\Documents\WeChat Files\lilinyang910810\FileStorage\File\2019-08\Gdp\Gdp.Core\obj\Debug\netstandard2.0\Gdp.Core.AssemblyInfo.cs
+C:\Users\admin\Documents\WeChat Files\lilinyang910810\FileStorage\File\2019-08\Gdp\Gdp.Core\obj\Debug\netstandard2.0\Gdp.Core.dll
+C:\Users\admin\Documents\WeChat Files\lilinyang910810\FileStorage\File\2019-08\Gdp\Gdp.Core\obj\Debug\netstandard2.0\Gdp.Core.pdb
+H:\Gdp\Gdp.Core\bin\Debug\netstandard2.0\Gdp.Core.deps.json
+H:\Gdp\Gdp.Core\bin\Debug\netstandard2.0\Gdp.Core.dll
+H:\Gdp\Gdp.Core\bin\Debug\netstandard2.0\Gdp.Core.pdb
+H:\Gdp\Gdp.Core\obj\Debug\netstandard2.0\Gdp.Core.csprojAssemblyReference.cache
+H:\Gdp\Gdp.Core\obj\Debug\netstandard2.0\Gdp.Core.csproj.CoreCompileInputs.cache
+H:\Gdp\Gdp.Core\obj\Debug\netstandard2.0\Gdp.Core.AssemblyInfoInputs.cache
+H:\Gdp\Gdp.Core\obj\Debug\netstandard2.0\Gdp.Core.AssemblyInfo.cs
+H:\Gdp\Gdp.Core\obj\Debug\netstandard2.0\Gdp.Core.dll
+H:\Gdp\Gdp.Core\obj\Debug\netstandard2.0\Gdp.Core.pdb
+D:\Codes\Csharp\Gdp\Gdp.Core\bin\Debug\netstandard2.0\Gdp.Core.deps.json
+D:\Codes\Csharp\Gdp\Gdp.Core\bin\Debug\netstandard2.0\Gdp.Core.dll
+D:\Codes\Csharp\Gdp\Gdp.Core\bin\Debug\netstandard2.0\Gdp.Core.pdb
+D:\Codes\Csharp\Gdp\Gdp.Core\obj\Debug\netstandard2.0\Gdp.Core.csprojAssemblyReference.cache
+D:\Codes\Csharp\Gdp\Gdp.Core\obj\Debug\netstandard2.0\Gdp.Core.AssemblyInfoInputs.cache
+D:\Codes\Csharp\Gdp\Gdp.Core\obj\Debug\netstandard2.0\Gdp.Core.AssemblyInfo.cs
+D:\Codes\Csharp\Gdp\Gdp.Core\obj\Debug\netstandard2.0\Gdp.Core.dll
+D:\Codes\Csharp\Gdp\Gdp.Core\obj\Debug\netstandard2.0\Gdp.Core.pdb
+C:\Users\Cui\Desktop\GDP\Gdp.2020.02.14.12[多系统修复部分]\Gdp.Core\bin\Debug\netstandard2.0\Gdp.Core.deps.json
+C:\Users\Cui\Desktop\GDP\Gdp.2020.02.14.12[多系统修复部分]\Gdp.Core\bin\Debug\netstandard2.0\Gdp.Core.dll
+C:\Users\Cui\Desktop\GDP\Gdp.2020.02.14.12[多系统修复部分]\Gdp.Core\bin\Debug\netstandard2.0\Gdp.Core.pdb
+C:\Users\Cui\Desktop\GDP\Gdp.2020.02.14.12[多系统修复部分]\Gdp.Core\obj\Debug\netstandard2.0\Gdp.Core.csprojAssemblyReference.cache
+C:\Users\Cui\Desktop\GDP\Gdp.2020.02.14.12[多系统修复部分]\Gdp.Core\obj\Debug\netstandard2.0\Gdp.Core.AssemblyInfoInputs.cache
+C:\Users\Cui\Desktop\GDP\Gdp.2020.02.14.12[多系统修复部分]\Gdp.Core\obj\Debug\netstandard2.0\Gdp.Core.AssemblyInfo.cs
+C:\Users\Cui\Desktop\GDP\Gdp.2020.02.14.12[多系统修复部分]\Gdp.Core\obj\Debug\netstandard2.0\Gdp.Core.dll
+C:\Users\Cui\Desktop\GDP\Gdp.2020.02.14.12[多系统修复部分]\Gdp.Core\obj\Debug\netstandard2.0\Gdp.Core.pdb

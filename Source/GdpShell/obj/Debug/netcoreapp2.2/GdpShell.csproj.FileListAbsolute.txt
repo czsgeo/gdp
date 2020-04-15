@@ -1,0 +1,13 @@
+D:\Codes\Csharp\Gdp\GdpShell\bin\Debug\netcoreapp2.2\gdp.deps.json
+D:\Codes\Csharp\Gdp\GdpShell\bin\Debug\netcoreapp2.2\gdp.runtimeconfig.json
+D:\Codes\Csharp\Gdp\GdpShell\bin\Debug\netcoreapp2.2\gdp.runtimeconfig.dev.json
+D:\Codes\Csharp\Gdp\GdpShell\bin\Debug\netcoreapp2.2\gdp.dll
+D:\Codes\Csharp\Gdp\GdpShell\bin\Debug\netcoreapp2.2\gdp.pdb
+D:\Codes\Csharp\Gdp\GdpShell\bin\Debug\netcoreapp2.2\Gdp.Standard.dll
+D:\Codes\Csharp\Gdp\GdpShell\bin\Debug\netcoreapp2.2\Gdp.Standard.pdb
+D:\Codes\Csharp\Gdp\GdpShell\obj\Debug\netcoreapp2.2\GdpShell.csprojAssemblyReference.cache
+D:\Codes\Csharp\Gdp\GdpShell\obj\Debug\netcoreapp2.2\GdpShell.AssemblyInfoInputs.cache
+D:\Codes\Csharp\Gdp\GdpShell\obj\Debug\netcoreapp2.2\GdpShell.AssemblyInfo.cs
+D:\Codes\Csharp\Gdp\GdpShell\obj\Debug\netcoreapp2.2\GdpShell.csproj.CopyComplete
+D:\Codes\Csharp\Gdp\GdpShell\obj\Debug\netcoreapp2.2\gdp.dll
+D:\Codes\Csharp\Gdp\GdpShell\obj\Debug\netcoreapp2.2\gdp.pdb
