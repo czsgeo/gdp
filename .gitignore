@@ -3,15 +3,15 @@
 ################################################################################
 
 /.vs/GDP
-/Gdp.Core/bin/Debug/netstandard2.0
-/Gdp.Core/obj/Debug/netstandard2.0
-/Gdp.Core/obj
-/Gdp.Winform/bin/Debug/sys.log
-/Gdp.Winform/bin/Debug/GdpWinUI.pdb
-/Gdp.Winform/bin/Debug/GdpWinUI.exe.config
-/Gdp.Winform/bin/Debug/GdpWinUI.exe
-/Gdp.Winform/bin/Debug/Gdp.Standard.pdb
-/Gdp.Winform/bin/Debug/Gdp.Standard.dll
-/Gdp.Winform/obj/Debug
-/GdpShell/obj
-/GdpShell/bin/Debug/netcoreapp3.1
+/Source/Gdp.Core/bin/Debug/netstandard2.0
+/Source/Gdp.Core/obj/Debug/netstandard2.0
+/Source/Gdp.Core/obj
+/Source/Gdp.Winform/bin/Debug/sys.log
+/Source/Gdp.Winform/bin/Debug/GdpWinUI.pdb
+/Source/Gdp.Winform/bin/Debug/GdpWinUI.exe.config
+/Source/Gdp.Winform/bin/Debug/GdpWinUI.exe
+/Source/Gdp.Winform/bin/Debug/Gdp.Standard.pdb
+/Source/Gdp.Winform/bin/Debug/Gdp.Standard.dll
+/Source/Gdp.Winform/obj/Debug
+/Source/GdpShell/obj
+/Source/GdpShell/bin/Debug/netcoreapp3.1
