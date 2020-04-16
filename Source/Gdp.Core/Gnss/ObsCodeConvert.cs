@@ -2,6 +2,8 @@
 //2018.04.27, czs, edit in hmx, 增加了IRNSS、SBAS、QZSS系统的支持，新增系统的频率有待确认
 //2018.06.03, lly & czs, edit in zz & hmx, 修改伽利略频率，按照RINEX的顺序 1 5 7 8 6
 //2018.09.25，czs, edit in hmx, 多系统支持重构，所有代码编号转换都放在这里
+//2020.04.16, czs, edit in hongqing, 按照RINEX 3.04 修改对照各个系统的频率
+
 
 
 using System;
@@ -11,10 +13,9 @@ using System.Linq;
 using System.Text;
 
 namespace Gdp
-{
-    /// <summary>
-    /// 观测码转换。原始观测码太多太复杂，需要转换为简单的几种类型。
-    /// </summary>
+{/// <summary>
+ /// 观测码转换。原始观测码太多太复杂，需要转换为简单的几种类型。
+ /// </summary>
     public class ObsCodeConvert
     {
         /// <summary>
@@ -36,8 +37,8 @@ namespace Gdp
         /// <param name="satType"></param>
         /// <param name="frequenceType"></param>
         /// <returns></returns>
-        public static List<int> GetRinexFrequenceNumber(SatelliteType satType, FrequenceType frequenceType )
-        { 
+        public static List<int> GetRinexFrequenceNumber(SatelliteType satType, FrequenceType frequenceType)
+        {
             Dictionary<FrequenceType, List<int>> dic = GetRinexFreqIndexDic(satType);
             if (dic.ContainsKey(frequenceType))
             {
@@ -56,7 +57,7 @@ namespace Gdp
         static public FrequenceType GetFrequenceType(SatelliteType type, int rinexNum)
         {
             Dictionary<FrequenceType, List<int>> dic = GetRinexFreqIndexDic(type);
-            return GetFrequenceType(dic, rinexNum); 
+            return GetFrequenceType(dic, rinexNum);
         }
         /// <summary>
         ///  根据对应关系获取频率编号，RINEX转换为GNSSer编号。
@@ -66,7 +67,7 @@ namespace Gdp
         static public FrequenceType GetFrequenceType(RinexSatFrequency rinexSatFrequency)
         {
             Dictionary<FrequenceType, List<int>> dic = GetRinexFreqIndexDic(rinexSatFrequency.SatelliteType);
-            return GetFrequenceType(dic, rinexSatFrequency.RinexCarrierNumber); 
+            return GetFrequenceType(dic, rinexSatFrequency.RinexCarrierNumber);
         }
 
         /// <summary>
@@ -79,76 +80,10 @@ namespace Gdp
         {
             foreach (var kv in dic)
             {
-                if (kv.Value.Contains(rinexNum)) { return kv.Key; } 
+                if (kv.Value.Contains(rinexNum)) { return kv.Key; }
             }
             return FrequenceType.Unknown;
         }
-
-        private static Dictionary<SatelliteType, Dictionary<FrequenceType, List<int>>> CasheOfRinexFreqIndexDics = new Dictionary<SatelliteType, Dictionary<FrequenceType, List<int>>>();
-        private static object freqLocker = new object();
-        /// <summary>
-        /// 计算各频率对应的 RINEX 编号，有的是一对多的关系。
-        /// </summary>
-        /// <param name="type"></param>
-        /// <returns></returns>
-        public static Dictionary<FrequenceType, List<int>> GetRinexFreqIndexDic(SatelliteType type)
-        {
-            if(CasheOfRinexFreqIndexDics != null && CasheOfRinexFreqIndexDics.ContainsKey(type)) { return CasheOfRinexFreqIndexDics[type]; }
-            lock (freqLocker)
-            {
-                if (CasheOfRinexFreqIndexDics != null && CasheOfRinexFreqIndexDics.ContainsKey(type)) { return CasheOfRinexFreqIndexDics[type]; }
-
-                Dictionary<FrequenceType, List<int>> result = new Dictionary<FrequenceType, List<int>>();
-                switch (type)
-                {
-                    case SatelliteType.S:
-                    case SatelliteType.G:
-                        result[FrequenceType.A] = new List<int>() { 1 };
-                        result[FrequenceType.B] = new List<int>() { 2 };
-                        result[FrequenceType.C] = new List<int>() { 5 };
-                        break;
-                    case SatelliteType.R:
-                        result[FrequenceType.A] = new List<int>() { 1 };
-                        result[FrequenceType.B] = new List<int>() { 2 };
-                        result[FrequenceType.C] = new List<int>() { 3 };
-                        break;
-                    case SatelliteType.E:
-                        result[FrequenceType.A] = new List<int>() { 1 };
-                        result[FrequenceType.B] = new List<int>() { 5 };
-                        result[FrequenceType.C] = new List<int>() { 7 };
-                        result[FrequenceType.D] = new List<int>() { 8 };
-                        result[FrequenceType.E] = new List<int>() { 6 };
-                        break;
-                    case SatelliteType.C: //215786
-                        result[FrequenceType.A] = new List<int>() { 2 , 1};
-                        result[FrequenceType.B] = new List<int>() { 7 };
-                        result[FrequenceType.C] = new List<int>() { 6 };//
-                       // result[FrequenceType.D] = new List<int>() { 6 }; 
-                        break;
-                    case SatelliteType.J:
-                        result[FrequenceType.A] = new List<int>() { 1 };
-                        result[FrequenceType.B] = new List<int>() { 2 };
-                        result[FrequenceType.C] = new List<int>() { 5 };
-                        result[FrequenceType.D] = new List<int>() { 6 };
-                        break;
-                    case SatelliteType.D:
-                        break;
-                    case SatelliteType.I:
-                        break;
-                    default:
-                        result[FrequenceType.A] = new List<int>() { 1 };
-                        result[FrequenceType.B] = new List<int>() { 2 };
-                        result[FrequenceType.C] = new List<int>() { 5 };
-                        break;
-                }
-
-                CasheOfRinexFreqIndexDics[type] = result;
-                return result;
-            }
-        }
-        #endregion
-
-        #region 获取频率对象，如果是GLONASS，则频率和卫星Slot和时间相关
         /// <summary>
         /// 获取已知的频率带宽。
         /// </summary>
@@ -161,7 +96,72 @@ namespace Gdp
         {
             var satType = GnssSystem.GetSatelliteType(type);
             var freqType = GetFrequenceType(satType, rinexNum);
-            return GetFrequenceBand(type, freqType, satNumber,time);
+            return GetFrequenceBand(type, freqType, satNumber, time);
+        }
+        #region 基础实现成对的转换
+        private static Dictionary<SatelliteType, Dictionary<FrequenceType, List<int>>> CasheOfRinexFreqIndexDics = new Dictionary<SatelliteType, Dictionary<FrequenceType, List<int>>>();
+        private static object freqLocker = new object();
+        /// <summary>
+        /// 计算各频率对应的 RINEX 编号，有的是一对多的关系。
+        /// </summary>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        public static Dictionary<FrequenceType, List<int>> GetRinexFreqIndexDic(SatelliteType type)
+        {
+            if (CasheOfRinexFreqIndexDics != null && CasheOfRinexFreqIndexDics.ContainsKey(type)) { return CasheOfRinexFreqIndexDics[type]; }
+            lock (freqLocker)
+            {
+                if (CasheOfRinexFreqIndexDics != null && CasheOfRinexFreqIndexDics.ContainsKey(type)) { return CasheOfRinexFreqIndexDics[type]; }
+
+                Dictionary<FrequenceType, List<int>> result = new Dictionary<FrequenceType, List<int>>();
+                switch (type)
+                {
+                    case SatelliteType.S:
+                    case SatelliteType.G:
+                    case SatelliteType.J:
+                        result[FrequenceType.A] = new List<int>() { 1 };
+                        result[FrequenceType.B] = new List<int>() { 2 };
+                        result[FrequenceType.C] = new List<int>() { 5 };
+                        result[FrequenceType.D] = new List<int>() { 6 };
+                        break;
+                    case SatelliteType.R:
+                        result[FrequenceType.A] = new List<int>() { 1 };
+                        result[FrequenceType.B] = new List<int>() { 2 };
+                        result[FrequenceType.C] = new List<int>() { 3 };
+                        result[FrequenceType.D] = new List<int>() { 4 };
+                        result[FrequenceType.F] = new List<int>() { 6 };
+                        break;
+                    case SatelliteType.E:
+                        result[FrequenceType.A] = new List<int>() { 1 };
+                        result[FrequenceType.B] = new List<int>() { 5 };
+                        result[FrequenceType.C] = new List<int>() { 6 };
+                        result[FrequenceType.D] = new List<int>() { 7 };
+                        result[FrequenceType.E] = new List<int>() { 8 };
+                        break;
+                    case SatelliteType.C: //215786
+                        result[FrequenceType.A] = new List<int>() { 1 };
+                        result[FrequenceType.B] = new List<int>() { 2 };
+                        result[FrequenceType.C] = new List<int>() { 5 };
+                        result[FrequenceType.D] = new List<int>() { 6 };
+                        result[FrequenceType.E] = new List<int>() { 7 };
+                        result[FrequenceType.F] = new List<int>() { 8 };
+                        break;
+                    case SatelliteType.D:
+                        break;
+                    case SatelliteType.I:
+                        result[FrequenceType.A] = new List<int>() { 5 };
+                        result[FrequenceType.B] = new List<int>() { 9 };
+                        break;
+                    default:
+                        result[FrequenceType.A] = new List<int>() { 1 };
+                        result[FrequenceType.B] = new List<int>() { 2 };
+                        result[FrequenceType.C] = new List<int>() { 5 };
+                        break;
+                }
+
+                CasheOfRinexFreqIndexDics[type] = result;
+                return result;
+            }
         }
 
         /// <summary>
@@ -172,29 +172,30 @@ namespace Gdp
         /// <param name="satNumber">卫星编号，GLONASS 系统需要</param>
         /// <param name="time">time，GLONASS 系统需要</param>
         /// <returns></returns>
-        public static Frequence GetFrequenceBand(GnssType type, FrequenceType freqType, int satNumber = -1, Time time=default(Time))
+        public static Frequence GetFrequenceBand(GnssType type, FrequenceType freqType, int satNumber = -1, Time time = default(Time))
         {
             switch (type)
             {
                 case GnssType.GPS:
                 case GnssType.SBAS:
+                case GnssType.QZSS:
                     switch (freqType)
                     {
                         case FrequenceType.A: return Frequence.GpsL1;
                         case FrequenceType.B: return Frequence.GpsL2;
                         case FrequenceType.C: return Frequence.GpsL5;
+                        case FrequenceType.D: return Frequence.QzssL6;
                         default:
                             return null;
-                            // throw new ArgumentException("GPS 有三个频率。分别以编号1、2、3表示。");
                     }
                 case GnssType.Galileo:
                     switch (freqType)
                     {
-                        case FrequenceType.A: return Frequence.GalileoE1;
-                        case FrequenceType.B: return Frequence.GalileoE5a;
-                        case FrequenceType.C: return Frequence.GalileoE5b;
-                        case FrequenceType.D: return Frequence.GalileoE5;
-                        case FrequenceType.E: return Frequence.GalileoE6;
+                        case FrequenceType.A: return Frequence.GalileoE1; //1
+                        case FrequenceType.B: return Frequence.GalileoE5a;//5
+                        case FrequenceType.C: return Frequence.GalileoE6;//6
+                        case FrequenceType.D: return Frequence.GalileoE5b;//7
+                        case FrequenceType.E: return Frequence.GalileoE5;//8
                         default:
                             return null;
                             //  throw new ArgumentException("Galileo 有5个频率。分别以编号 1-5 表示。");
@@ -202,9 +203,12 @@ namespace Gdp
                 case GnssType.BeiDou: //215786
                     switch (freqType)
                     {
-                        case FrequenceType.A: return Frequence.CompassB1;
-                        case FrequenceType.B: return Frequence.CompassB2;
-                        case FrequenceType.C: return Frequence.CompassB3; 
+                        case FrequenceType.A: return Frequence.BdsB1;//1
+                        case FrequenceType.B: return Frequence.BdsB1_2; //2
+                        case FrequenceType.C: return Frequence.BdsB2a;//5
+                        case FrequenceType.D: return Frequence.BdsB3;//6
+                        case FrequenceType.E: return Frequence.BdsB2b;//7
+                        case FrequenceType.F: return Frequence.BdsB2;//8
                         default:
                             return null;
                             //   throw new ArgumentException("BeiDou 有三个频率。分别以编号1、2、3表示。");
@@ -214,31 +218,25 @@ namespace Gdp
                         throw new ArgumentException("GLONASS是频分多址，需要指定卫星编号，此处有待改进！！！！请联系开发人员。");
                     var prn = new SatelliteNumber(satNumber, SatelliteType.R);
                     var k = (int)GlobalGlonassSlotFreqService.Instance.Get(prn, time);
-                  //   var k = Setting.GnsserConfig.GlonassSlotFrequences[prn];
-                    
+                    //   var k = Setting.GnsserConfig.GlonassSlotFrequences[prn];
+
                     switch (freqType)
                     {
-                        case FrequenceType.A: return Frequence.GetGlonassG1(k);
-                        case FrequenceType.B: return Frequence.GetGlonassG2(k);
-                        case FrequenceType.C: return Frequence.GlonassG3;
+                        case FrequenceType.A: return Frequence.GetGlonassG1(k);//1
+                        case FrequenceType.B: return Frequence.GetGlonassG2(k);//2
+                        case FrequenceType.C: return Frequence.GlonassG3;//3
+                        case FrequenceType.D: return Frequence.GlonassG1a;//4
+                        case FrequenceType.F: return Frequence.GlonassG2a;//6
                         default:
                             return null;
                             //  throw new ArgumentException("GLONASS 有2个载波。分别以编号1、2表示。");
                     }
-                case GnssType.QZSS:
-                    switch (freqType)
-                    {
-                        case FrequenceType.A: return Frequence.GpsL1;
-                        case FrequenceType.B: return Frequence.GpsL2;
-                        case FrequenceType.C:return Frequence.GpsL5;
-                        case FrequenceType.D: return Frequence.QzssL6;
-                        default:
-                            return null;
-                    }
                 case GnssType.NAVIC:
+                case GnssType.IRNSS:
                     switch (freqType)
                     {
-                        case FrequenceType.A: return Frequence.NavicL5;
+                        case FrequenceType.A: return Frequence.IrnssL5;
+                        case FrequenceType.B: return Frequence.IrnssS9;//2
                         default:
                             return null;
                     }
@@ -257,6 +255,9 @@ namespace Gdp
             throw new ArgumentException(type + "尚不支持，请联系管理员。");
 
         }
+
+        #endregion
         #endregion
     }
+
 }

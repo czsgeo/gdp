@@ -3,6 +3,7 @@
 ################################################################################
 
 /.vs/GDP
+/Source/Gdp.Winform/bin/
 /Source/Gdp.Core/bin/Debug/netstandard2.0
 /Source/Gdp.Core/obj/Debug/netstandard2.0
 /Source/Gdp.Core/obj

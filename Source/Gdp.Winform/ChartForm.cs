@@ -1,4 +1,6 @@
-﻿using Gdp.Data.Rinex;
+﻿//2020.04.16, czs, edit in hongqing, fontsize changeable
+
+using Gdp.Data.Rinex;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -40,8 +42,8 @@ namespace Gdp.Winform
                     }
                 }
 
-                var series =  chart1.Series.Add(prn.ToString());  
-
+                var series =  chart1.Series.Add(prn.ToString());
+            //    series.Font = new Font("Times New Roman", 12);
                 var color =  Color.DarkBlue;
          
                 switch (prn.SatelliteType)
@@ -137,11 +139,15 @@ namespace Gdp.Winform
 
         private void 调整字体大小FToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            double fontSize = chart1.ChartAreas[0].AxisY.LabelStyle.Font.Size;
-           if (   Gdp.Utils.FormUtil.ShowInputNumeralForm("font size",out fontSize, fontSize))
+            var chart = chart1.ChartAreas[0];
+            double fontSize = chart.AxisY.LabelStyle.Font.Size;
+           if ( Gdp.Utils.FormUtil.ShowInputNumeralForm("font size",out fontSize, fontSize))
             {
-                chart1.ChartAreas[0].AxisY.LabelStyle.Font = new Font(chart1.ChartAreas[0].AxisY.LabelStyle.Font.Name, (float)fontSize);
-                chart1.ChartAreas[0].AxisY.LabelStyle.Font = new Font(chart1.ChartAreas[0].AxisX.LabelStyle.Font.Name, (float)fontSize);
+                chart.AxisY.IsLabelAutoFit = false;
+                chart.AxisY.LabelStyle.Font = new Font(chart.AxisY.LabelStyle.Font.Name, (float)fontSize);
+
+                chart.AxisX.IsLabelAutoFit = false;
+                chart.AxisX.LabelStyle.Font = new Font(chart.AxisX.LabelStyle.Font.Name, (float)fontSize);
             }
         }
     }

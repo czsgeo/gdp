@@ -52,6 +52,7 @@
             this.chart1.Location = new System.Drawing.Point(0, 0);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
+            series1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chart1.Series.Add(series1);
@@ -64,12 +65,12 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.调整字体大小FToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(163, 26);
             // 
             // 调整字体大小FToolStripMenuItem
             // 
             this.调整字体大小FToolStripMenuItem.Name = "调整字体大小FToolStripMenuItem";
-            this.调整字体大小FToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.调整字体大小FToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.调整字体大小FToolStripMenuItem.Text = "调整字体大小(&F)";
             this.调整字体大小FToolStripMenuItem.Click += new System.EventHandler(this.调整字体大小FToolStripMenuItem_Click);
             // 

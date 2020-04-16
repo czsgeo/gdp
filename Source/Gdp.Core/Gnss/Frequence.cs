@@ -1,5 +1,6 @@
 ﻿// 2014.09.16, czs, refactor, 频率命名为：Frequency，值为：Value，波长不变。
 //2018.06.03, lly & czs, edit in zz & hmx, 修改伽利略频率，按照RINEX的顺序 1 5 7 8 6
+//2020.04.16, czs, edit in hongqing, 按照RINEX 3.04 修改对照各个系统的频率
 
 using System;
 using System.Collections.Generic;
@@ -9,6 +10,7 @@ using Gdp.IO;
 
 namespace Gdp
 {
+
     /// <summary>
     /// 频段。 GNSS 波段和频率。
     /// </summary>
@@ -22,7 +24,7 @@ namespace Gdp
         /// <param name="frequence">频率，单位为10的6次方</param>
         public Frequence(string name, double frequence)
         {
-            this.Name = name; 
+            this.Name = name;
             this.Value = frequence;
         }
 
@@ -48,7 +50,7 @@ namespace Gdp
         public double GetDistance(long cycle)
         {
             double len = WaveLength * cycle;
-          //  len = 0.10695337814214670 * cycle;
+            //  len = 0.10695337814214670 * cycle;
             return len;
         }
         /// <summary>
@@ -58,8 +60,8 @@ namespace Gdp
         /// <returns></returns>
         public long GetCycle(double distance)
         {
-            double clycle =  Math.Floor((distance / WaveLength));
-          //  clycle = Math.Floor((distance / 0.10695337814214670));
+            double clycle = Math.Floor((distance / WaveLength));
+            //  clycle = Math.Floor((distance / 0.10695337814214670));
             return (long)clycle;
         }
 
@@ -98,8 +100,7 @@ namespace Gdp
         #endregion
 
         #region 静态方法
-      
-       
+
         /// <summary>
         /// 获取频率
         /// </summary>
@@ -139,7 +140,7 @@ namespace Gdp
         /// <param name="prn">卫星编号</param>
         /// <param name="time">时间，GLONASS需要</param>
         /// <returns></returns>
-        public static Frequence GetFrequenceA(SatelliteNumber prn, Time time = default(Time))
+        public static Frequence GetFrequenceA(SatelliteNumber prn,  Time time = default(Time))
         {
             return ObsCodeConvert.GetFrequenceBand(GnssSystem.GetGnssType(prn.SatelliteType), FrequenceType.A, prn.PRN, time);
         }
@@ -174,7 +175,7 @@ namespace Gdp
         /// <returns></returns>
         public static Frequence GetFrequenceA(SatelliteType type, int satNumber = -1, Time time = default(Time))
         {
-            return ObsCodeConvert.GetFrequenceBand(GnssSystem.GetGnssType(type), FrequenceType.A, satNumber, time); 
+            return ObsCodeConvert.GetFrequenceBand(GnssSystem.GetGnssType(type), FrequenceType.A, satNumber, time);
         }
         /// <summary>
         /// 获取系统第一频率
@@ -184,7 +185,7 @@ namespace Gdp
         /// <returns></returns>
         public static Frequence GetFrequenceB(SatelliteType type, int satNumber = -1, Time time = default(Time))
         {
-            return ObsCodeConvert.GetFrequenceBand(GnssSystem.GetGnssType(type), FrequenceType.B, satNumber, time); 
+            return ObsCodeConvert.GetFrequenceBand(GnssSystem.GetGnssType(type), FrequenceType.B, satNumber, time);
         }
         /// <summary>
         /// 获取系统第3频率
@@ -206,7 +207,7 @@ namespace Gdp
         /// <returns></returns>
         public static Frequence GetFrequenceA(GnssType type, int satNumber = -1, Time time = default(Time))
         {
-            return ObsCodeConvert.GetFrequenceBand(type, FrequenceType.A, satNumber, time) ;
+            return ObsCodeConvert.GetFrequenceBand(type, FrequenceType.A, satNumber, time);
         }
         /// <summary>
         /// 获取系统第一频率
@@ -217,7 +218,7 @@ namespace Gdp
         /// <returns></returns>
         public static Frequence GetFrequenceB(GnssType type, int satNumber = -1, Time time = default(Time))
         {
-            return ObsCodeConvert.GetFrequenceBand(type, FrequenceType.B, satNumber,time);
+            return ObsCodeConvert.GetFrequenceBand(type, FrequenceType.B, satNumber, time);
         }
         /// <summary>
         /// 获取频率带宽。
@@ -229,7 +230,7 @@ namespace Gdp
         /// <returns></returns>
         public static Frequence GetFrequence(SatelliteType type, int rinexNum, int satNumber = -1, Time time = default(Time))
         {
-            return ObsCodeConvert.GetFrequenceBand(GnssSystem.GetGnssType(type), rinexNum, satNumber,time);
+            return ObsCodeConvert.GetFrequenceBand(GnssSystem.GetGnssType(type), rinexNum, satNumber, time);
         }
         /// <summary>
         /// 获取频率
@@ -241,7 +242,7 @@ namespace Gdp
         /// <returns></returns>
         public static Frequence GetFrequence(GnssType type, int rinexNum, int satNumber = -1, Time time = default(Time))
         {
-            return   ObsCodeConvert.GetFrequenceBand(type,rinexNum,satNumber ,time );
+            return ObsCodeConvert.GetFrequenceBand(type, rinexNum, satNumber, time);
         }
         #endregion
 
@@ -249,7 +250,7 @@ namespace Gdp
         /// <summary>
         /// 默认采用GPSL1
         /// </summary>
-        public static Frequence Default { get => GpsL1; }
+        public static Frequence Default => GpsL1;
 
         /// <summary>
         /// 获取宽项
@@ -314,21 +315,81 @@ namespace Gdp
         public static Frequence GpsNarrowBand { get { return GetNarrowBand(GpsL1, GpsL2); } }
 
         /// <summary>
-        /// GPS SBAS L1. 1575.42 波长 0.19029
+        /// 获取频带数字编号
         /// </summary>
-        static public Frequence GpsL1= new Frequence("L1", 1575.42); 
+        /// <param name="satType"></param>
+        /// <param name="carrierFrequencyHz"></param>
+        /// <returns></returns>
+        public static int GetBandNumber(SatelliteType satType, double carrierFrequencyHz)
+        {
+            return GetBandNumberRinex304(satType, carrierFrequencyHz);
+        }
         /// <summary>
-        /// GPS L2. 1227.60波长0.24421
+        /// 按照RINEX3.04转换频率编号。
         /// </summary>
-        static public Frequence GpsL2 = new Frequence("L2", 1227.60);
+        /// <param name="satType"></param>
+        /// <param name="carrierFrequencyHz"></param>
+        /// <returns></returns>
+        public static int GetBandNumberRinex304(SatelliteType satType, double carrierFrequencyHz)
+        {
+            switch (satType)
+            {
+                case SatelliteType.S://SBAS
+                case SatelliteType.G://GPS
+                case SatelliteType.J://QZSS
+                    if (IsApproxEqualTo(carrierFrequencyHz, 1575.42e6, 1e3)) { return 1; }
+                    if (IsApproxEqualTo(carrierFrequencyHz, 1227.60e6, 1e3)) { return 2; }
+                    if (IsApproxEqualTo(carrierFrequencyHz, 1176.45e6, 1e3)) { return 5; }
+                    //QZSS
+                    if (IsApproxEqualTo(carrierFrequencyHz, 1278.75e6, 1e3)) { return 6; }
+
+                    break;
+                case SatelliteType.R:
+                    if (IsApproxEqualTo(carrierFrequencyHz, 1202.025e6, 1e3)) { return 3; }
+                    if (IsApproxEqualTo(carrierFrequencyHz, 1600.995e6, 1e3)) { return 4; }
+                    if (IsApproxEqualTo(carrierFrequencyHz, 1248.06e6, 1e3)) { return 6; }
+                    var center = (1602e6 + 1246e6) / 2.0;
+                    return carrierFrequencyHz > center ? 1 : 2;
+                    break;
+                case SatelliteType.E:
+                    if (IsApproxEqualTo(carrierFrequencyHz, 1575.42e6, 1e3)) { return 1; }
+                    if (IsApproxEqualTo(carrierFrequencyHz, 1176.45e6, 1e3)) { return 5; }
+                    if (IsApproxEqualTo(carrierFrequencyHz, 1278.75e6, 1e3)) { return 6; }
+                    if (IsApproxEqualTo(carrierFrequencyHz, 1207.140e6, 1e3)) { return 7; }
+                    if (IsApproxEqualTo(carrierFrequencyHz, 1191.795e6, 1e3)) { return 8; }
+                    break;
+                case SatelliteType.C:
+                    if (IsApproxEqualTo(carrierFrequencyHz, 1575.42e6, 1e3)) { return 1; }
+                    if (IsApproxEqualTo(carrierFrequencyHz, 1561.098e6, 1e3)) { return 2; }
+                    if (IsApproxEqualTo(carrierFrequencyHz, 1176.45e6, 1e3)) { return 5; }
+                    if (IsApproxEqualTo(carrierFrequencyHz, 1268.52e6, 1e3)) { return 6; }
+                    if (IsApproxEqualTo(carrierFrequencyHz, 1207.140e6, 1e3)) { return 7; }
+                    if (IsApproxEqualTo(carrierFrequencyHz, 1191.795e6, 1e3)) { return 8; }
+                    break;
+                case SatelliteType.I://IRNSS
+                    if (IsApproxEqualTo(carrierFrequencyHz, 1176.45e6, 1e3)) { return 5; }
+                    if (IsApproxEqualTo(carrierFrequencyHz, 2492.028e6, 1e3)) { return 9; }
+                    break;
+                case SatelliteType.D:
+                case SatelliteType.U:
+                case SatelliteType.M:
+                default:
+                    break;
+            }
+            return 1;
+
+        }
+
+
+        static public bool IsApproxEqualTo(double one, double other, double maxAllowedDiffer)
+        {
+            return Math.Abs(one - other) < maxAllowedDiffer;
+        }
+
         /// <summary>
         /// GPS MW 频率
         /// </summary>
         static public Frequence GpsMw = new Frequence("Mw", GpsL1.Value - GpsL2.Value);
-        /// <summary>
-        /// GPS SBAS L5
-        /// </summary>
-        static public Frequence GpsL5 { get { return new Frequence("L5", 1176.45); } }
         /// <summary>
         /// 指定系统MW组合频率
         /// </summary>
@@ -370,7 +431,7 @@ namespace Gdp
         /// <returns></returns>
         public static Frequence GetCompositFreqence(double factorA, Frequence bandA, double factorB, Frequence bandB, string name = null)
         {
-            double frequence = factorA * bandA.Value+ factorB* bandB.Value;
+            double frequence = factorA * bandA.Value + factorB * bandB.Value;
             name = name ?? bandA.Name + "(" + factorA.ToString("0.00") + ")" + "_" + bandB.Name + "(" + factorA.ToString("0.00") + ")";
             Frequence band = new Frequence(name, frequence);
             return band;
@@ -378,15 +439,38 @@ namespace Gdp
 
         #endregion
 
+        #region  GPS
+        /// <summary>
+        /// GPS SBAS L1. 1575.42 波长 0.19029
+        /// </summary>
+        static public Frequence GpsL1 => new Frequence("L1", 1575.42);
+        /// <summary>
+        /// GPS L2. 1227.60波长0.24421
+        /// </summary>
+        static public Frequence GpsL2 => new Frequence("L2", 1227.60);
+        /// <summary>
+        /// GPS SBAS L5
+        /// </summary>
+        static public Frequence GpsL5 { get { return new Frequence("L5", 1176.45); } }
+        #endregion
+
+        #region QZSS
+
+        /// <summary>
+        /// Galileo QZSS E6
+        /// </summary>
+        static public Frequence QzssL6 => new Frequence("L6", 1278.75);
+        #endregion
+
         #region SBAS
         /// <summary>
         /// GPS SBAS L1. 1575.42 波长 0.19029
         /// </summary>
-        static public Frequence SbasL1 { get { return new Frequence("L1", 1575.42); } } 
+        static public Frequence SbasL1 => new Frequence("L1", 1575.42);
         /// <summary>
         /// GPS SBAS L5
         /// </summary>
-        static public Frequence SbasL5 { get { return new Frequence("L5", 1176.45); } }
+        static public Frequence SbasL5 => new Frequence("L5", 1176.45);
         #endregion
 
         #region Glonass
@@ -405,97 +489,95 @@ namespace Gdp
         /// <returns></returns>
         static public Frequence GetGlonassG1(int k)
         {
-          //  Frequence g1 = new Frequence("G1", 1602 + k * 9 / 16);
-            Frequence g1 = new Frequence("G1Of" + k, 1602.5625 +(k-1) * 0.5625);
+            //  Frequence g1 = new Frequence("G1", 1602 + k * 9 / 16);
+            Frequence g1 = new Frequence("G1Of" + k, 1602.5625 + (k - 1) * 0.5625);
             return g1;
         }
         /// <summary>
-        /// GLONASS G2  k= -7...+12
+        ///C2C, GLONASS G2  k= -7...+12
         /// </summary>
         /// <param name="k">1-24卫星编号</param>
         /// <returns></returns>
         static public Frequence GetGlonassG2(int k)
         {
             // 7/16
-            Frequence g2 = new Frequence("G2Of" + k, 1246.4375 + (k-1) * 0.4375);
+            Frequence g2 = new Frequence("G2Of" + k, 1246.4375 + (k - 1) * 0.4375);
             return g2;
         }
         /// <summary>
-        /// GLONASS G3
+        /// G3I, GLONASS G3
         /// </summary>
-        static public Frequence GlonassG3 { get { return new Frequence("G3", 1202.025); } }
-
+        static public Frequence GlonassG3 => new Frequence("G3", 1202.025);
+        /// <summary>
+        ///C4A , GlonassG1a
+        /// </summary>
+        static public Frequence GlonassG1a => new Frequence("G1a", 1600.995);
+        /// <summary>
+        ///C6A , GlonassG1a
+        /// </summary>
+        static public Frequence GlonassG2a => new Frequence("G2a", 1202.025);
         #endregion
 
         #region Galileo
         /// <summary>
-        /// Galileo E1
+        ///1， Galileo E1
         /// </summary>
-        static public Frequence GalileoE1 { get { return new Frequence("E1", 1575.42); } }
-
+        static public Frequence GalileoE1 => new Frequence("E1", 1575.42);
         /// <summary>
-        /// Galileo E5a
+        ///5， Galileo E5a
         /// </summary>
-        static public Frequence GalileoE5a { get { return new Frequence("E5a", 1176.45); } }
-
+        static public Frequence GalileoE5a => new Frequence("E5a", 1176.45);
         /// <summary>
-        /// Galileo E5b
+        ///6， Galileo QZSS E6
         /// </summary>
-        static public Frequence GalileoE5b { get { return new Frequence("E5b", 1207.140); } }
+        static public Frequence GalileoE6 => new Frequence("E6", 1278.75);
         /// <summary>
-        /// Galileo E5 (E5a+E5b)
+        ///,7， Galileo E5b
         /// </summary>
-        static public Frequence GalileoE5 { get { return new Frequence("E5", 1191.795); } }
-
+        static public Frequence GalileoE5b => new Frequence("E5b", 1207.140);
         /// <summary>
-        /// Galileo QZSS E6
+        ///8， Galileo E5 (E5a+E5b)
         /// </summary>
-        static public Frequence GalileoE6 { get { return new Frequence("E6", 1278.75); } }
-        /// <summary>
-        /// Galileo QZSS E6
-        /// </summary>
-        static public Frequence QzssL6 { get { return new Frequence("L6", 1278.75); } }
+        static public Frequence GalileoE5 => new Frequence("E5", 1191.795);
         #endregion
 
-        #region CompassE1
+        #region BDS
         /// <summary>
-        /// Compass E1 ??? 这个待定的
+        ///C2I, C2Q, C2D , B1-2 / 1561.098 , 
         /// </summary>
-      //  static public Frequence CompassE1 { get { return new Frequence("E1", 1589.74); } }
+        static public Frequence BdsB1_2 => new Frequence("B1_2", 1561.098);
+        /// <summary>
+        ///C1D, C1P, C1X, C1A,  B1 / 1575.42         (BDS-3 Signals)
+        /// </summary>
+        static public Frequence BdsB1 => new Frequence("B1", 1575.42);
+        /// <summary>
+        /// C5D,C5P, C5X , Compass B2B2a / 1176.45         (BDS-3 Signals) 
+        /// </summary>
+        static public Frequence BdsB2a => new Frequence("B2a", 1176.45);
+        /// <summary>
+        ///C7I,C7Q,C7X,C7D ,C7P,C7Z  , Compass B2 B2b / 1207.140        (BDS-2 Signals),(BDS-3 Signals)
+        /// </summary>
+        static public Frequence BdsB2b => new Frequence("B2b", 1207.140);
+        /// <summary>
+        /// C8D,C8P,C8X ,B2(B2a+B2b)/1191.795,        (BDS-3 Signals)
+        /// </summary>
+        static public Frequence BdsB2 => new Frequence("B2", 1191.795);
 
         /// <summary>
-        /// 1、2, Compass B1
+        ///C6I,C6Q,C6X,C6A  , Compass B3/1268.52 
         /// </summary>
-        static public Frequence CompassB1 { get { return new Frequence("B1", 1561.098); } } 
-        /// <summary>
-        /// 5, Compass B2
-        /// </summary>
-        static public Frequence CompassB2a { get { return new Frequence("B2a", 1176.45); } }
-        /// <summary>
-        /// 7, Compass B2
-        /// </summary>
-        static public Frequence CompassB2 { get { return new Frequence("B2", 1207.140); } }
-        /// <summary>
-        /// 8
-        /// </summary>
-        static public Frequence CompassB2ab { get { return new Frequence("B2ab", 1191.795); } }
-
-        /// <summary>
-        /// 6, Compass B2
-        /// </summary>
-        static public Frequence CompassB3 { get { return new Frequence("B3", 1268.52); } }
+        static public Frequence BdsB3 => new Frequence("B3", 1268.52);
 
         #endregion
 
-        #region NAVIC
+        #region NAVIC, IRNSS
         /// <summary>
         /// NAVIC L5
         /// </summary>
-        static public Frequence NavicL5 { get { return new Frequence("L5", 1176.45); } }
+        static public Frequence IrnssL5 => new Frequence("L5", 1176.45);
+        static public Frequence IrnssS9 => new Frequence("S9", 2492.028);
         #endregion
-
 
         #endregion
     }
-
 }
