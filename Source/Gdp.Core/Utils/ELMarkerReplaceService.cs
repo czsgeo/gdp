@@ -21,6 +21,7 @@ namespace Gdp
         public const string Month = "{Month}";
         public const string Day = "{Day}";
         public const string Week = "{Week}";
+        public const string GpsWeek = "{GpsWeek}";
         public const string BdsWeek = "{BdsWeek}";
         public const string WeekOfYear = "{WeekOfYear}";
         public const string DayOfYear = "{DayOfYear}";
@@ -184,6 +185,7 @@ namespace Gdp
             Dictionary.Add(ELMarker.Month, ifrom.Month.ToString("00"));
             Dictionary.Add(ELMarker.Day, ifrom.Day.ToString("00"));
             Dictionary.Add("{Week}", ifrom.GpsWeek.ToString("0000"));
+            Dictionary.Add("{GpsWeek}", ifrom.GpsWeek.ToString("0000"));
             Dictionary.Add("{BdsWeek}", ifrom.BdsWeek.ToString("0000"));
             Dictionary.Add("{WeekOfYear}", ifrom.WeekOfYear.ToString("00"));
             Dictionary.Add("{DayOfWeek}", ((int)ifrom.DayOfWeek) + "");
