@@ -151,7 +151,7 @@ namespace Gdp.Winform
                 chart.AxisY.LabelStyle.Font = new Font(chart.AxisY.LabelStyle.Font.Name, (float)fontSize);
 
                 chart.AxisX.IsLabelAutoFit = false;
-                chart.AxisX.LabelStyle.Font = new Font(chart.AxisX.LabelStyle.Font.Name, (float)fontSize);
+                chart.AxisX.LabelStyle.Font = new Font(chart.AxisX.LabelStyle.Font.Name, (float)fontSize + 2);
             }
         }
     }
