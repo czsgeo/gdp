@@ -148,10 +148,10 @@ namespace Gdp.Winform
                 chart.AxisY.LabelStyle.IntervalType = DateTimeIntervalType.Auto;
                 chart.AxisY.LabelStyle.IsStaggered = true;   //设置是否交错显示,比如数据多的时间分成两行来显示 
                 chart.AxisY.LabelStyle.IntervalOffsetType = DateTimeIntervalType.Auto;// = fontSize;
-                chart.AxisY.LabelStyle.Font = new Font(chart.AxisY.LabelStyle.Font.Name, (float)fontSize);
+                chart.AxisY.LabelStyle.Font = new Font("Arial", (float)fontSize);
 
                 chart.AxisX.IsLabelAutoFit = false;
-                chart.AxisX.LabelStyle.Font = new Font(chart.AxisX.LabelStyle.Font.Name, (float)fontSize + 2);
+                chart.AxisX.LabelStyle.Font = new Font("Arial", (float)fontSize + 2);
             }
         }
     }
