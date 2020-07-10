@@ -294,6 +294,11 @@ namespace Gdp.Winform
 
         private void Button_viewInOneTable_Click(object sender, EventArgs e)
         {
+            if (this.ObsFile == null)
+            {
+                Gdp.Utils.FormUtil.ShowWarningMessageBox("Please read file first.");
+                return;
+            }
             var table = this.ObsFile.BuildObjectTable(!IsShowL1Only);
             new TableObjectViewForm(table).Show();
         }

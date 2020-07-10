@@ -643,13 +643,17 @@ namespace Gdp.Data.Rinex
             if (FileUtil.IsValid(navPath)) { header.NavFilePath = navPath; }
             else
             {
-                var upDir = Path.GetDirectoryName(Path.GetDirectoryName(navPath));
-                var navName = Path.GetFileName(navPath);
-                navPath = Path.Combine(upDir, navName);
-
-                if (FileUtil.IsValid(navPath))
+                var dir = Path.GetDirectoryName(navPath);
+                var upDir = Path.GetDirectoryName(dir);
+                if (upDir != null)
                 {
-                    header.NavFilePath = navPath;
+                    var navName = Path.GetFileName(navPath);
+                    navPath = Path.Combine(upDir, navName);
+
+                    if (FileUtil.IsValid(navPath))
+                    {
+                        header.NavFilePath = navPath;
+                    }
                 }
             }
             return navPath;
@@ -1337,6 +1341,8 @@ namespace Gdp.Data.Rinex
             {
                 log.Warn(header.FileName + "，略过非观测段的开始，包含标识符：“>”，内容是：" + line);
                 line = ReadContentLine(reader);
+                if (line == null) { return null; }
+
                 indexOfStart = line.IndexOf('>');
             }
 

@@ -41,3 +41,4 @@ D:\Codes\Csharp\Gdp\Source\Gdp.Core\obj\Debug\netstandard2.0\Gdp.Standard.Assemb
 D:\Codes\Csharp\Gdp\Source\Gdp.Core\obj\Debug\netstandard2.0\Gdp.Standard.AssemblyInfo.cs
 D:\Codes\Csharp\Gdp\Source\Gdp.Core\obj\Debug\netstandard2.0\Gdp.Standard.dll
 D:\Codes\Csharp\Gdp\Source\Gdp.Core\obj\Debug\netstandard2.0\Gdp.Standard.pdb
+D:\Codes\Csharp\Gdp\Source\Gdp.Core\obj\Debug\netstandard2.0\Gdp.Standard.csprojAssemblyReference.cache

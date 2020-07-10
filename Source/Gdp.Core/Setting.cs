@@ -36,7 +36,7 @@ namespace Gdp
         /// <summary>
         /// GNSSer 临时目录名称
         /// </summary>
-        public static string GnsserTempSubDirectoryName = "GnsserTempOutput";
+        public static string GnsserTempSubDirectoryName = "TempOutput";
         /// <summary>
         /// GNSSer工程目录
         /// </summary>
