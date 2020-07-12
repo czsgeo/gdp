@@ -25,7 +25,10 @@ namespace Gdp.Data.Rinex
             string lastChar = Gdp.Utils.StringUtil.GetLastChar(ObsPath);
             string lastChar3 = Gdp.Utils.StringUtil.GetLastChar(ObsPath, 3);
             string lastChar5 = Gdp.Utils.StringUtil.GetLastChar(ObsPath, 5);
-            if (String.Equals(lastChar, "o", StringComparison.CurrentCultureIgnoreCase) || String.Equals(lastChar3, "rnx", StringComparison.CurrentCultureIgnoreCase))
+            if (String.Equals(lastChar, "o", StringComparison.CurrentCultureIgnoreCase)
+                || String.Equals(lastChar3, "rnx", StringComparison.CurrentCultureIgnoreCase)
+                || String.Equals(lastChar3, "obs", StringComparison.CurrentCultureIgnoreCase)
+                )
             {
                 var obsFileReader = new RinexObsFileReader(ObsPath);
                 ObsFile = obsFileReader.ReadObsFile();
