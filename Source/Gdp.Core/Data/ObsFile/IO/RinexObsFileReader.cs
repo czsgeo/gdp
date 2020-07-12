@@ -1397,7 +1397,7 @@ namespace Gdp.Data.Rinex
                                                              //{
                                                              //    line = ReadContentLine(reader);
                                                              //}
-            int SatCount = int.Parse( Utils.StringUtil.SubString( line, 32, 3));
+            int SatCount = StringUtil.ParseInt(line, 32, 3);
 
             int maxLoop = 500;
             int loopCount = 0;
@@ -1428,7 +1428,7 @@ namespace Gdp.Data.Rinex
                 if (String.IsNullOrWhiteSpace(line)) { return 0; }
 
                 EpochFlag = int.Parse(line.Substring(30, 2)); //扩展为2位，支持Gdp自定义
-                SatCount = int.Parse(line.Substring(32, 3));
+                SatCount = StringUtil.ParseInt(line, 32, 3);
                 loopCount++;
                 if (loopCount > maxLoop)
                 {
@@ -1440,7 +1440,7 @@ namespace Gdp.Data.Rinex
             //第一行 
             rec.RawTime = Time.Parse(line.Substring(2, 27));//时间项目有可能是不存在的，这里要判断,解析函数具有判断功能。
             rec.EpochFlag = EpochFlag;
-            SatCount = int.Parse(Utils.StringUtil.SubString(line, 32, 3));
+            SatCount = StringUtil.ParseInt(line, 32, 3);
             rec.ReceiverClockOffset = StringUtil.ParseDouble(line, 41, 15);
             return SatCount;
         }

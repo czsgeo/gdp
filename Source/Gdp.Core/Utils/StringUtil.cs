@@ -900,6 +900,21 @@ namespace Gdp.Utils
             return val;
         }
         /// <summary>
+        /// 在字符串中截取部分，并转换为int类型。
+        /// </summary>
+        /// <param name="line"></param>
+        /// <param name="startIndex"></param>
+        /// <param name="maxLen"></param>
+        /// <returns></returns>
+        public static int ParseInt(string line, int startIndex, int maxLen = Int16.MaxValue)
+        { 
+            var str = SubString(line, startIndex, maxLen);
+
+            if (String.IsNullOrWhiteSpace(str)) return 0;
+
+            return Int32.Parse(str);
+        }
+        /// <summary>
         /// 解析字符串
         /// </summary>
         /// <param name="str"></param>
@@ -920,12 +935,7 @@ namespace Gdp.Utils
         /// <returns></returns>
         public static double ParseDouble(string line, int startIndex, int maxLen = Int16.MaxValue)
         {
-
-            int len = line.Length;
-            if (len <= startIndex) return 0;
-            string str = null;
-            if (len >= startIndex + maxLen) str = line.Substring(startIndex, maxLen);
-            else str = line.Substring(startIndex);
+            var str = SubString(line, startIndex, maxLen);
 
             if (String.IsNullOrWhiteSpace(str)) return 0;
 
