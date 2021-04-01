@@ -267,9 +267,9 @@ namespace Gdp
                 List<double> DataMp1 = new List<double>();
 
                 Dictionary<Time, double> dicMp1 = new Dictionary<Time, double>();
-               
+                 
                 foreach (var epoch in ObsFile)
-                {
+                { 
                     dicMp1.Add(epoch.ReceiverTime, 0);
                     if (epoch.Contains(prn))
                     {
@@ -298,7 +298,6 @@ namespace Gdp
 
                                 for (int i = 0; i < Times.Count - 1; i++)
                                 {
-
 
                                     if (dicMp1.ContainsKey(Times[i]))
                                     {
@@ -414,7 +413,7 @@ namespace Gdp
             //table.NewRow();
             //table.AddItem("rmsMp", rmsMp);
             //table.AddItem("rmsMp1", rmsMp1);
-
+            table = table.Transpose();
             return table;
         }
 
@@ -576,6 +575,7 @@ namespace Gdp
             //table.AddItem("rmsMp", rmsMp);
             //table.AddItem("rmsMp2", rmsMp2);
 
+            table = table.Transpose();
             return table;
         }
 
@@ -737,6 +737,7 @@ namespace Gdp
             //table.AddItem("rmsMp", rmsMp);
             //table.AddItem("rmsMp3", rmsMp3);
 
+            table = table.Transpose();
             return table;
         }
 

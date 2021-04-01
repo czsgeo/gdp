@@ -540,6 +540,63 @@ namespace Gdp
             }
             return Vector;
         }
+        /// <summary>
+        /// 返回转置
+        /// </summary>
+        /// <returns></returns>
+        public ObjectTableStorage Transpose()
+        {
+            ObjectTableStorage result = new ObjectTableStorage(this.Name);
+            this.BuildIndexes();
+            var indexName = this.Indexes;
+            int i = 0;
+            foreach (var kv in indexName)
+            {
+                if(i++ == 0) { continue; }
+                result.NewRow();
+                result.AddItem( "Name", kv.Key );
+                foreach (var item in kv.Value)
+                {
+                    if (item.Value == null || String.IsNullOrWhiteSpace(item.Value + ""))  {   continue;    }
+                    result.AddItem(item.Key, item.Value);
+                } 
+            }
+            return result;
+        }
+
+        /// <summary>
+        /// 转置
+        /// </summary>
+        public ObjectTableStorage Transpose(string namePostfix = "Transpose", bool isReplacePrevPosfix = true)
+        {
+            var newName = TableNameHelper.BuildName(this.Name, namePostfix, isReplacePrevPosfix);
+            var table = new ObjectTableStorage(newName);
+            var indexes = this.GetIndexValues();
+            var indexName = GetIndexColName();
+            foreach (var oldColName in this.ParamNames)
+            {
+                var oldCols = this.GetColObjectDic(oldColName);
+                if (indexName.Equals(oldColName, StringComparison.CurrentCultureIgnoreCase)) { continue; }
+
+                table.NewRow();
+                int i = -1;
+                foreach (var oldCol in oldCols)
+                {
+                    i++;
+                    var newColName = oldCol.Key;
+                    var newColValue = oldCol.Value;
+
+                    if (i == 0) { table.AddItem("Name", oldColName); }
+
+                    if (newColValue == null || String.IsNullOrWhiteSpace(newColValue + "")) { continue; }
+
+                    table.AddItem(newColName, newColValue);
+                }
+
+                table.EndRow();
+            }
+            return table;
+        }
         #endregion
         #endregion
 

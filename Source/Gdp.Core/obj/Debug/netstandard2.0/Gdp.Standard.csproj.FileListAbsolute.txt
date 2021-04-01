@@ -42,3 +42,12 @@ D:\Codes\Csharp\Gdp\Source\Gdp.Core\obj\Debug\netstandard2.0\Gdp.Standard.Assemb
 D:\Codes\Csharp\Gdp\Source\Gdp.Core\obj\Debug\netstandard2.0\Gdp.Standard.dll
 D:\Codes\Csharp\Gdp\Source\Gdp.Core\obj\Debug\netstandard2.0\Gdp.Standard.pdb
 D:\Codes\Csharp\Gdp\Source\Gdp.Core\obj\Debug\netstandard2.0\Gdp.Standard.csprojAssemblyReference.cache
+E:\Codes\Csharp\Gdp\Source\Gdp.Core\bin\Debug\netstandard2.0\Gdp.Standard.deps.json
+E:\Codes\Csharp\Gdp\Source\Gdp.Core\bin\Debug\netstandard2.0\Gdp.Standard.dll
+E:\Codes\Csharp\Gdp\Source\Gdp.Core\bin\Debug\netstandard2.0\Gdp.Standard.pdb
+E:\Codes\Csharp\Gdp\Source\Gdp.Core\obj\Debug\netstandard2.0\Gdp.Standard.csprojAssemblyReference.cache
+E:\Codes\Csharp\Gdp\Source\Gdp.Core\obj\Debug\netstandard2.0\Gdp.Standard.AssemblyInfoInputs.cache
+E:\Codes\Csharp\Gdp\Source\Gdp.Core\obj\Debug\netstandard2.0\Gdp.Standard.AssemblyInfo.cs
+E:\Codes\Csharp\Gdp\Source\Gdp.Core\obj\Debug\netstandard2.0\Gdp.Standard.csproj.CoreCompileInputs.cache
+E:\Codes\Csharp\Gdp\Source\Gdp.Core\obj\Debug\netstandard2.0\Gdp.Standard.dll
+E:\Codes\Csharp\Gdp\Source\Gdp.Core\obj\Debug\netstandard2.0\Gdp.Standard.pdb

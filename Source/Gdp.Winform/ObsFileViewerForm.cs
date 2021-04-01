@@ -416,6 +416,7 @@ namespace Gdp.Winform
                 return;
             }
             var table = ObsFileAnalyzer.GetMp1Table(this.ObsFile, FileEphemerisService);
+            ObjectTableWriter.Write(table, "D:\\TableMp1.txt.xls");
             new TableObjectViewForm(table).Show();
 
         }
@@ -441,6 +442,7 @@ namespace Gdp.Winform
                 return;
             }
             var table = ObsFileAnalyzer.GetMp2Table(this.ObsFile, FileEphemerisService);
+            ObjectTableWriter.Write(table, "D:\\TableMp2.txt.xls");
             new TableObjectViewForm(table).Show();
         }
 
@@ -452,6 +454,7 @@ namespace Gdp.Winform
                 return;
             }
             var table = ObsFileAnalyzer.GetMp3Table(this.ObsFile, FileEphemerisService);
+            ObjectTableWriter.Write(table, "D:\\TableMp3.txt.xls");
             new TableObjectViewForm(table).Show();
         }
     }
